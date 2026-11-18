@@ -36,6 +36,9 @@ const ZIELE = {
     url: "https://open.spotify.com/artist/4StU5O0sjXiyuYFDU4IFiL",
     verstecke: '#onetrust-consent-sdk, aside[data-testid="now-playing-bar"]',
   },
+  "br-simulator": { url: "https://tschortsch3711.github.io/br-simulator/" },
+  "br-selbstcheck": { url: "https://tschortsch3711.github.io/br-oder-burnout/" },
+  "br-or-not-2-br": { url: "https://tschortsch3711.github.io/BRorNot2BR/" },
   // Keine Live-Seite (Repo privat): eigene Ablauf-Grafik aus werkzeug/grafiken
   "release-pipeline": { url: pathToFileURL(join(wurzel, "werkzeug/grafiken/release-pipeline.html")).href },
 };
