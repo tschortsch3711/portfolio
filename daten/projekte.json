@@ -1,0 +1,221 @@
+{
+  "seite": {
+    "url": "https://tschortsch3711.github.io/portfolio/",
+    "name": "Nikola Djordjevic",
+    "titel": "Nikola Djordjevic · Projekte",
+    "beschreibung": "Öffentliche Projekte von Nikola Djordjevic aus Freising: 3D-Druck, Lagerhallen, Backblog, ein KI-Glossar und ein paar kleine Seiten.",
+    "einleitungTitel": "Webseiten, Wissen und Dinge aus dem Drucker.",
+    "einleitung": "Ich bin Nikola, Designer und Maker aus Freising bei München. Hier sind meine öffentlichen Webprojekte, jedes mit einer eigenen Seite.",
+    "github": "https://github.com/tschortsch3711",
+    "bilderStand": "18.11.2026"
+  },
+  "gruppen": [
+    {
+      "id": "betriebe",
+      "name": "Betriebe & Handwerk",
+      "projekte": [
+        {
+          "slug": "3dmensional",
+          "name": "3Dmensional",
+          "satz": "3D-Druck, Konstruktion und Gravur in Kranzberg bei Freising.",
+          "aussage": "Bauteile aus dem 3D-Drucker, nach Maß, aus einer Werkstatt in Kranzberg.",
+          "unter": "Prototypen, Ersatzteile, Kleinserien und Einzelstücke für Privatleute und Betriebe. Fehlt die Datei, entsteht das Teil aus Maßen, Skizze oder Original.",
+          "fakten": {
+            "was": "3D-Druck, Konstruktion, Lasergravur und CNC-Fräsen",
+            "fuerWen": "Privatleute und Betriebe in und um Freising",
+            "womit": "Statisches HTML und CSS, Schriften selbst gehostet",
+            "stand": "Live, Anfragen jederzeit"
+          },
+          "absaetze": [
+            {
+              "titel": "Vom Maß zum Teil",
+              "text": "Schwerpunkt ist der 3D-Druck mit einem Bauraum bis 360 × 360 × 360 mm. Konstruiert wird in Fusion 360, graviert auf Holz, Bambus, Leder, Acryl und Keramik. Vor jedem Auftrag gibt es ein Angebot."
+            },
+            {
+              "titel": "Welches Material",
+              "text": "Die Seite erklärt PLA für drinnen, PETG für Belastung, ASA für draußen und TPU für biegsame Teile, jeweils mit ihren Grenzen."
+            },
+            {
+              "titel": "In Zahlen",
+              "text": "2.467 Stunden Druckzeit und 2.136 Downloads der eigenen Modelle auf Makerworld und Printables, Stand 28.09.2026."
+            }
+          ],
+          "links": [
+            { "was": "Live-Seite", "url": "https://3dmensional.de" }
+          ],
+          "bildAlt": "Startseite von 3Dmensional mit der Überschrift „Dein Bauteil, gedruckt nach Maß.“"
+        },
+        {
+          "slug": "lagerhimmel",
+          "name": "Lagerhimmel",
+          "satz": "Abschließbare Lagerhallen und Garagen in Kranzberg.",
+          "aussage": "Eine eigene Halle mit eigenem Tor, zum Mieten in Kranzberg.",
+          "unter": "16 abschließbare Hallen mit 25 oder 40 m², eigenem Stromzähler und Starkstrom. Für Wohnmobil, Oldtimer, Möbel und Gewerbe.",
+          "fakten": {
+            "was": "Vermietung von 16 Hallen in zwei Größen",
+            "fuerWen": "Wer Wohnmobil, Auto, Möbel oder Material unterstellen will",
+            "womit": "Statisches HTML und CSS, Schriften selbst gehostet",
+            "stand": "Live, zurzeit alles vermietet, Warteliste offen"
+          },
+          "absaetze": [
+            {
+              "titel": "Zwei Größen, feste Preise",
+              "text": "Die kleine Halle mit rund 25 m² kostet 261,80 € im Monat, die große mit rund 40 m² 380,80 €, jeweils inklusive Umsatzsteuer. Stand 29.09.2026."
+            },
+            {
+              "titel": "Passt mein Wohnmobil?",
+              "text": "Eine kleine Tabelle auf der Seite vergleicht typische Höhen von Kastenwagen bis Integriertem mit dem Tor der großen Halle, rund 3,5 m hoch."
+            },
+            {
+              "titel": "Vier Schritte",
+              "text": "Anfragen, besichtigen, Vertrag, einlagern. Kontakt per Telefon, WhatsApp oder E-Mail. Die Karte ist nicht eingebettet, ein Link öffnet Google Maps."
+            }
+          ],
+          "links": [
+            { "was": "Live-Seite", "url": "https://lagerhimmel.de" }
+          ],
+          "bildAlt": "Startseite von Lagerhimmel mit der Überschrift „Eigene Halle mieten in Kranzberg“ und einer Illustration der Anlage"
+        },
+        {
+          "slug": "ganachekatze",
+          "name": "Ganachekatze",
+          "satz": "Backblog, Rezepte und Shop rund ums Backen mit Wow-Effekt.",
+          "aussage": "Ein Backblog mit Rezepten, Shop und eigenem Backbuch.",
+          "unter": "Torten, Guglhupf, Cookies und Plätzchen, dazu E-Books mit Rezepten und das Buch „Einfach backen mit Wow-Effekt“.",
+          "fakten": {
+            "was": "Blog, Shop und Buchseite",
+            "fuerWen": "Hobbybäckerinnen und Hobbybäcker",
+            "womit": "WordPress mit Elementor",
+            "stand": "Live seit 2021"
+          },
+          "absaetze": [
+            {
+              "titel": "Aus dem Ofen",
+              "text": "Der Blog zeigt die aktuellen Backwerke, vom Pink Flower Cake bis zum Eierlikörguglhupf. Neue Reels von Instagram laufen auf der Startseite mit."
+            },
+            {
+              "titel": "Das Buch",
+              "text": "„Einfach backen mit Wow-Effekt“ hat 160 Seiten und über 50 Backideen, von Torten bis Cookies, jeweils mit Zutaten, Zeit und Mengen."
+            },
+            {
+              "titel": "Der Shop",
+              "text": "Im Shop gibt es E-Books wie „Cookie Therapy: Chunky & Creamy“ und „Auf die Plätzchen, fertig, los!“."
+            }
+          ],
+          "links": [
+            { "was": "Live-Seite", "url": "https://ganachekatze.de" }
+          ],
+          "bildAlt": "Startseite von Ganachekatze mit dem Schriftzug Ganachekatze und Fotos von Torten"
+        }
+      ]
+    },
+    {
+      "id": "wissen",
+      "name": "Wissen",
+      "projekte": [
+        {
+          "slug": "von-ka-zu-ki",
+          "name": "Von K.A. zu K.I.",
+          "satz": "Ein verständliches KI-Glossar, über bekannte Fachwelten greifbar gemacht.",
+          "aussage": "KI-Begriffe, sauber erklärt und durch die Brille der eigenen Branche gesehen.",
+          "unter": "Jeder Begriff hat eine fachliche Definition und daneben mehrere Erklärwelten, etwa Automotive, Public Sector, Healthcare und Finance & Banking.",
+          "fakten": {
+            "was": "Analogiebasiertes KI-Glossar mit Suche, Filtern und Lernpfaden",
+            "fuerWen": "Menschen, die mit KI arbeiten, aber keine KI-Fachleute sind",
+            "womit": "Astro, TypeScript, Fuse.js, GitHub Pages",
+            "stand": "Live, Code unter MIT-Lizenz"
+          },
+          "absaetze": [
+            {
+              "titel": "Ein Begriff, mehrere Brillen",
+              "text": "Zu jedem Begriff gehören Definition, warum er wichtig ist, typische Missverständnisse und mehrere Perspektiven. Jede Analogie nennt auch ihre Grenze, denn jede Brille zeigt eine Seite und verschweigt eine andere."
+            },
+            {
+              "titel": "Wo man einsteigt",
+              "text": "Man kann das Glossar per Volltextsuche durchsuchen, die Perspektive wechseln oder einem Lernpfad für Management, IT oder Einsteiger folgen. Dazu gibt es kleine Wissenstests."
+            },
+            {
+              "titel": "Ohne Server",
+              "text": "Die Seite ist komplett statisch. Die Suche läuft im Browser über eine JSON-Datei, es gibt keine Server-Komponente und keine externen KI-Dienste."
+            }
+          ],
+          "links": [
+            { "was": "Live-Seite", "url": "https://tschortsch3711.github.io/von-ka-zu-ki/" },
+            { "was": "Repo", "url": "https://github.com/tschortsch3711/von-ka-zu-ki" }
+          ],
+          "bildAlt": "Startseite von Von K.A. zu K.I. mit der Überschrift und den Einstiegen Glossar, Perspektiven und Lernpfade"
+        },
+        {
+          "slug": "fleischbibel",
+          "name": "Fleischbibel",
+          "satz": "Die zentrale Dokumentation der Fleischgemeinschaft.",
+          "aussage": "Alles, was in der Gruppe zu wichtig ist, um im Chat unterzugehen.",
+          "unter": "Regeln, Termine, Rituale und Begriffe der Fleischgemeinschaft an einem Ort, statt verstreut in Gruppenbeschreibung und Chatverlauf.",
+          "fakten": {
+            "was": "Dokumentation einer WhatsApp-Gruppe",
+            "fuerWen": "Die Fleischgemeinschaft, besonders Neue",
+            "womit": "VitePress, Markdown, GitHub Actions",
+            "stand": "Live, Code unter MIT-Lizenz"
+          },
+          "absaetze": [
+            {
+              "titel": "Wofür es sie gibt",
+              "text": "WhatsApp ist für schnelle Abstimmung. Die Fleischbibel erklärt dauerhaft Regeln, Abläufe und Grundsätze. Wer neu ist, fängt mit dem 2-Minuten-Guide an."
+            },
+            {
+              "titel": "Was drinsteht",
+              "text": "Die Gemeinschaft selbst, Regeln für Chat und Treffen, die Organisation ohne Oberhaupt, das Fleischmeldeamt mit der monatlichen Verfügbarkeitsabfrage und die Kultur mit Begriffen, Hymne und Chronik."
+            },
+            {
+              "titel": "Wie sie gepflegt wird",
+              "text": "Alle Seiten sind Markdown-Dateien. Nach einem Push auf main baut GitHub Actions die Seite und veröffentlicht sie."
+            }
+          ],
+          "links": [
+            { "was": "Live-Seite", "url": "https://fleischbibel.de" },
+            { "was": "Repo", "url": "https://github.com/tschortsch3711/fleischbibel" }
+          ],
+          "bildAlt": "Startseite der Fleischbibel mit dem Titel „Die Fleischbibel“ und Kacheln für Gemeinschaft, Regeln und Organisation"
+        }
+      ]
+    },
+    {
+      "id": "klein",
+      "name": "Kleine Seiten",
+      "projekte": [
+        {
+          "slug": "shisha-as-a-service",
+          "name": "Shisha as a Service",
+          "satz": "Vier Shisha-Bars zur Wahl, zwischen Freising und Regensburg.",
+          "aussage": "Vier Shisha-Bars für einen Donnerstag, sortiert nach fairer Fahrzeit.",
+          "unter": "Eine kleine Seite für ein Treffen am 19.11.2026. Wer sie bekommt, sucht sich eine Bar aus und schickt die Nummer zurück.",
+          "fakten": {
+            "was": "Vergleichsseite für eine Verabredung",
+            "fuerWen": "Zwei Leute, die sich zwischen Freising und Regensburg treffen",
+            "womit": "Eine einzige HTML-Datei, kein externes JavaScript, kein Tracking",
+            "stand": "Gebaut am 18.11.2026"
+          },
+          "absaetze": [
+            {
+              "titel": "Die Strecke",
+              "text": "Oben liegt die Strecke Freising bis Regensburg. Jede Bar sitzt dort, wo sich die Fahrzeit für beide aufteilt. Je näher an der Mitte, desto fairer."
+            },
+            {
+              "titel": "Die Auswahl",
+              "text": "Towers in Landshut, Dejavu in der Landshuter Altstadt, Illyrian in Abensberg-Aumühle und MOG‘ 68 in Moosburg an der Isar. Darunter Karten mit Öffnungszeiten und Stimmen aus den Bewertungen."
+            },
+            {
+              "titel": "Wie es entstand",
+              "text": "Vorher wurden drei Layouts verglichen: Vergleichsliste, Strecke und eine Bar pro Bildschirm. Die Strecke hat gewonnen. Ganz unten wartet ein kleiner Service-Check zum Augenzwinkern."
+            }
+          ],
+          "links": [
+            { "was": "Live-Seite", "url": "https://tschortsch3711.github.io/shisha-as-a-service/" },
+            { "was": "Repo", "url": "https://github.com/tschortsch3711/shisha-as-a-service" }
+          ],
+          "bildAlt": "Startseite von Shisha as a Service mit der Strecke zwischen Freising und Regensburg und vier nummerierten Bars"
+        }
+      ]
+    }
+  ]
+}

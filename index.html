@@ -3,259 +3,127 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Öffentliches Portfolio von Nikola Djordjevic: Webseiten, Werkzeuge und kleine Projekte.">
-<title>Nikola Djordjevic</title>
-<style>
-@font-face {
-  font-family: "Sen";
-  src: url("fonts/Sen/Sen-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Sen";
-  src: url("fonts/Sen/Sen-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-:root {
-  --bg: #ffffff;
-  --ink: #000000;
-  --muted: #555555;
-  --line: #e6e6e6;
-  --font: "Sen", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-  --max: 920px;
-  --pad: 28px;
-}
-
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  font-family: var(--font);
-  background: var(--bg);
-  color: var(--ink);
-  line-height: 1.5;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-}
-a { color: inherit; }
-a:hover { text-decoration-thickness: 2px; }
-a:focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 2px;
-}
-.skip {
-  position: absolute;
-  left: -999px;
-  top: 0;
-}
-.skip:focus {
-  left: 1rem;
-  top: 1rem;
-  z-index: 99;
-  background: var(--bg);
-  padding: .5rem 1rem;
-  border: 1px solid var(--ink);
-}
-.shell {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding-left: var(--pad);
-  padding-right: var(--pad);
-}
-@media (max-width: 640px) {
-  :root { --pad: 18px; }
-}
-
-.site-header {
-  border-bottom: 1px solid var(--ink);
-  padding: 1rem 0;
-}
-.wordmark {
-  display: inline-flex;
-  align-items: center;
-  gap: .65rem;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: -0.03em;
-}
-.wordmark-mark {
-  display: grid;
-  place-items: center;
-  width: 1.7rem;
-  height: 1.7rem;
-  background: var(--ink);
-  color: var(--bg);
-  font-size: .72rem;
-  letter-spacing: 0;
-  line-height: 1;
-}
-.intro {
-  padding: 2.4rem 0 2rem;
-}
-.intro h1 {
-  margin: 0 0 .7rem;
-  font-size: clamp(1.7rem, 4.5vw, 2.4rem);
-  line-height: 1.12;
-  letter-spacing: -0.03em;
-  font-weight: 700;
-  max-width: 22ch;
-}
-.intro p {
-  margin: 0;
-  max-width: 42ch;
-  color: var(--muted);
-  font-size: 1.05rem;
-}
-
-.group { padding: 0 0 2.25rem; }
-.group h2 {
-  margin: 0 0 .15rem;
-  font-family: var(--mono);
-  font-size: .72rem;
-  font-weight: 400;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  border-top: 1px solid var(--ink);
-  padding-top: .7rem;
-}
-
-.list { list-style: none; margin: 0; padding: 0; }
-.row {
-  display: grid;
-  grid-template-columns: minmax(9rem, 15rem) 1fr auto;
-  gap: .75rem 1.25rem;
-  align-items: baseline;
-  padding: .95rem 0;
-  border-bottom: 1px solid var(--line);
-}
-.row h3 {
-  margin: 0;
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
-}
-.row .line {
-  margin: 0;
-  color: var(--muted);
-  font-size: .95rem;
-}
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .15rem .9rem;
-  justify-content: flex-end;
-  font-size: .88rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-.links a { text-decoration: underline; text-underline-offset: 3px; }
-
-@media (max-width: 700px) {
-  .row {
-    grid-template-columns: 1fr;
-    gap: .25rem;
-    padding: 1rem 0;
-  }
-  .links { justify-content: flex-start; padding-top: .2rem; }
-}
-
-.site-footer {
-  border-top: 1px solid var(--ink);
-  padding: 1.25rem 0 2.5rem;
-  font-size: .85rem;
-  color: var(--muted);
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem 1.25rem;
-  justify-content: space-between;
-}
-.site-footer a { color: var(--ink); font-weight: 700; }
-</style>
+<title>Nikola Djordjevic · Projekte</title>
+<meta name="description" content="Öffentliche Projekte von Nikola Djordjevic aus Freising: 3D-Druck, Lagerhallen, Backblog, ein KI-Glossar und ein paar kleine Seiten.">
+<meta name="author" content="Nikola Djordjevic">
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://tschortsch3711.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Nikola Djordjevic">
+<meta property="og:title" content="Nikola Djordjevic · Projekte">
+<meta property="og:description" content="Öffentliche Projekte von Nikola Djordjevic aus Freising: 3D-Druck, Lagerhallen, Backblog, ein KI-Glossar und ein paar kleine Seiten.">
+<meta property="og:url" content="https://tschortsch3711.github.io/portfolio/">
+<meta property="og:image" content="https://tschortsch3711.github.io/portfolio/assets/bilder/og/start.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nikola Djordjevic: Webseiten, Wissen und Dinge aus dem Drucker.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="preload" href="./fonts/Sen/Sen-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/css/tokens.css">
+<link rel="stylesheet" href="./assets/css/site.css">
 </head>
 <body>
-<a class="skip" href="#main">Zum Inhalt springen</a>
-<header class="site-header">
-  <div class="shell">
-    <a class="wordmark" href="./">
-      <span class="wordmark-mark" aria-hidden="true">nd</span>
-      <span>Nikola Djordjevic</span>
+<a class="springen" href="#inhalt">Zum Inhalt springen</a>
+<header class="kopf">
+  <div class="rahmen">
+    <a class="wortmarke" href="./" aria-label="Nikola Djordjevic, zur Übersicht">
+      <span class="wortmarke-zeichen" aria-hidden="true">nd</span>
+      <span class="wortmarke-name">Nikola Djordjevic</span>
     </a>
+    <a class="kopf-link" href="https://github.com/tschortsch3711">GitHub</a>
   </div>
 </header>
-<main id="main">
-  <div class="shell">
-    <section class="intro">
-      <h1>Webseiten, Werkzeuge und ein paar Dinge aus dem Drucker.</h1>
-      <p>Ich komme aus Freising bei München und arbeite an Produkten und Lösungen. Mich interessieren lokale LLMs, Agenten- und Workflow-Systeme, 3D-Druck und Webprojekte.</p>
+<main id="inhalt">
+  <div class="rahmen">
+    <section class="einleitung">
+      <h1>Webseiten, Wissen und Dinge aus dem Drucker.</h1>
+      <p>Ich bin Nikola, Designer und Maker aus Freising bei München. Hier sind meine öffentlichen Webprojekte, jedes mit einer eigenen Seite.</p>
     </section>
 
-    <section class="group" aria-labelledby="g-web">
-      <h2 id="g-web">Webseiten &amp; Domains</h2>
-      <ul class="list">
-        <li class="row">
-          <h3>3Dmensional</h3>
-          <p class="line">3D-Druck, Konstruktion und Gravur in Kranzberg bei Freising.</p>
-          <p class="links"><a href="https://3dmensional.de">Seite</a></p>
+    <section class="gruppe" aria-labelledby="g-betriebe">
+      <div class="gruppe-kopf">
+        <h2 class="etikett" id="g-betriebe">Betriebe &amp; Handwerk</h2>
+        <span class="etikett" aria-hidden="true">3</span>
+      </div>
+      <ul>
+        <li>
+          <a class="zeile" href="projekte/3dmensional/">
+            <span class="zeile-nr" aria-hidden="true">01</span>
+            <span class="zeile-name">3Dmensional</span>
+            <span class="zeile-satz">3D-Druck, Konstruktion und Gravur in Kranzberg bei Freising.</span>
+            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          </a>
         </li>
-        <li class="row">
-          <h3>Lagerhimmel</h3>
-          <p class="line">Abschließbare Lagerhallen und Garagen in Kranzberg, zum Mieten.</p>
-          <p class="links"><a href="https://lagerhimmel.de">Seite</a></p>
+        <li>
+          <a class="zeile" href="projekte/lagerhimmel/">
+            <span class="zeile-nr" aria-hidden="true">02</span>
+            <span class="zeile-name">Lagerhimmel</span>
+            <span class="zeile-satz">Abschließbare Lagerhallen und Garagen in Kranzberg.</span>
+            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          </a>
         </li>
-        <li class="row">
-          <h3>Ganachekatze</h3>
-          <p class="line">Backblog, Rezepte und Shop rund ums Backen mit Wow-Effekt.</p>
-          <p class="links"><a href="https://ganachekatze.de">Seite</a></p>
-        </li>
-        <li class="row">
-          <h3>Fleischbibel</h3>
-          <p class="line">Die zentrale Dokumentation der Fleischgemeinschaft.</p>
-          <p class="links"><a href="https://fleischbibel.de">Seite</a> <a href="https://github.com/tschortsch3711/fleischbibel">Repo</a></p>
+        <li>
+          <a class="zeile" href="projekte/ganachekatze/">
+            <span class="zeile-nr" aria-hidden="true">03</span>
+            <span class="zeile-name">Ganachekatze</span>
+            <span class="zeile-satz">Backblog, Rezepte und Shop rund ums Backen mit Wow-Effekt.</span>
+            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          </a>
         </li>
       </ul>
     </section>
 
-    <section class="group" aria-labelledby="g-tools">
-      <h2 id="g-tools">Werkzeuge</h2>
-      <ul class="list">
-        <li class="row">
-          <h3>Von K.A. zu K.I.</h3>
-          <p class="line">Ein verständliches KI-Glossar, über bekannte Fachwelten greifbar gemacht.</p>
-          <p class="links"><a href="https://tschortsch3711.github.io/von-ka-zu-ki/">Seite</a> <a href="https://github.com/tschortsch3711/von-ka-zu-ki">Repo</a></p>
+    <section class="gruppe" aria-labelledby="g-wissen">
+      <div class="gruppe-kopf">
+        <h2 class="etikett" id="g-wissen">Wissen</h2>
+        <span class="etikett" aria-hidden="true">2</span>
+      </div>
+      <ul>
+        <li>
+          <a class="zeile" href="projekte/von-ka-zu-ki/">
+            <span class="zeile-nr" aria-hidden="true">04</span>
+            <span class="zeile-name">Von K.A. zu K.I.</span>
+            <span class="zeile-satz">Ein verständliches KI-Glossar, über bekannte Fachwelten greifbar gemacht.</span>
+            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          </a>
         </li>
-        <li class="row">
-          <h3>i-have-adhd</h3>
-          <p class="line">Claude-Code-Skill für direkte, ADHD-freundliche Antworten.</p>
-          <p class="links"><a href="https://github.com/tschortsch3711/i-have-adhd">Repo</a></p>
+        <li>
+          <a class="zeile" href="projekte/fleischbibel/">
+            <span class="zeile-nr" aria-hidden="true">05</span>
+            <span class="zeile-name">Fleischbibel</span>
+            <span class="zeile-satz">Die zentrale Dokumentation der Fleischgemeinschaft.</span>
+            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          </a>
         </li>
       </ul>
     </section>
 
-    <section class="group" aria-labelledby="g-small">
-      <h2 id="g-small">Kleine Seiten &amp; Spielereien</h2>
-      <ul class="list">
-        <li class="row">
-          <h3>Shisha as a Service</h3>
-          <p class="line">Kleine Vergleichsseite für Shisha-Bars zwischen Freising und Regensburg.</p>
-          <p class="links"><a href="https://tschortsch3711.github.io/shisha-as-a-service/">Seite</a> <a href="https://github.com/tschortsch3711/shisha-as-a-service">Repo</a></p>
+    <section class="gruppe" aria-labelledby="g-klein">
+      <div class="gruppe-kopf">
+        <h2 class="etikett" id="g-klein">Kleine Seiten</h2>
+        <span class="etikett" aria-hidden="true">1</span>
+      </div>
+      <ul>
+        <li>
+          <a class="zeile" href="projekte/shisha-as-a-service/">
+            <span class="zeile-nr" aria-hidden="true">06</span>
+            <span class="zeile-name">Shisha as a Service</span>
+            <span class="zeile-satz">Vier Shisha-Bars zur Wahl, zwischen Freising und Regensburg.</span>
+            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          </a>
         </li>
       </ul>
     </section>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="shell" style="display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between;width:100%;padding-left:0;padding-right:0;">
-    <span>Nikola Djordjevic</span>
-    <a href="https://github.com/tschortsch3711">GitHub</a>
+<footer class="fuss">
+  <div class="rahmen">
+    <span>Nikola Djordjevic · Freising</span>
+    <span>Statische Seite, ohne Tracking</span>
+    <a href="https://github.com/tschortsch3711">github.com/tschortsch3711</a>
   </div>
 </footer>
 </body>
