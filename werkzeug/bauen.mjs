@@ -186,7 +186,7 @@ function projektseite(p, i) {
         <div class="bild">
           <img src="${bild}-1600.webp" srcset="${bild}-800.webp 800w, ${bild}-1600.webp 1600w" sizes="(max-width: 64rem) 100vw, 60rem" width="1600" height="1000" alt="${esc(p.bildAlt)}" fetchpriority="high">
         </div>
-        <figcaption class="bild-unter etikett">Screenshot der Live-Seite, ${esc(seite.bilderStand)}</figcaption>
+        <figcaption class="bild-unter etikett">${esc(p.bildUnter || `Screenshot der Live-Seite, ${seite.bilderStand}`)}</figcaption>
       </figure>
     </section>
 

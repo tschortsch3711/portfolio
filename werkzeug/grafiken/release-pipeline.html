@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Ablauf-Grafik für die Projektseite release-pipeline.
+     Wird von werkzeug/bilder.mjs bei 1280 × 800 abfotografiert, nicht ausgeliefert. -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: Sen; src: url("../../fonts/Sen/Sen-Regular.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: Sen; src: url("../../fonts/Sen/Sen-Bold.woff2") format("woff2"); font-weight: 700; }
+* { margin: 0; box-sizing: border-box; }
+html, body { width: 1280px; height: 800px; background: #f4f4f4; color: #000; }
+body { font-family: Sen, Arial, sans-serif; padding: 56px 64px; display: flex; flex-direction: column; gap: 32px; }
+.mono { font-family: ui-monospace, Consolas, monospace; text-transform: uppercase; letter-spacing: .08em; }
+.kopf { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 3px solid #000; padding-bottom: 20px; }
+.kopf h1 { font-size: 44px; letter-spacing: -.035em; line-height: 1; }
+.kopf span { font-size: 16px; color: #595959; }
+.raster { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; flex: 1; }
+.feld { background: #fff; border: 2px solid #000; padding: 22px 22px 20px; display: flex; flex-direction: column; gap: 10px; position: relative; }
+.feld .nr { font-size: 15px; color: #595959; }
+.feld h2 { font-size: 32px; letter-spacing: -.03em; line-height: 1.05; }
+.feld p { font-size: 19px; line-height: 1.35; color: #333; }
+.feld .skill { margin-top: auto; font-size: 14px; color: #595959; text-transform: none; letter-spacing: 0; }
+.frei { position: absolute; top: -2px; right: -2px; background: #000; color: #fff; font-size: 13px; padding: 6px 10px; }
+.ziel { background: #000; color: #fff; }
+.ziel .nr, .ziel p, .ziel .skill { color: #cfcfcf; }
+.fuss { display: flex; justify-content: space-between; font-size: 15px; color: #595959; border-top: 1px solid #000; padding-top: 16px; }
+.fuss b { color: #000; font-weight: 400; }
+</style>
+</head>
+<body>
+  <div class="kopf">
+    <h1>Von der Idee bis auf Spotify</h1>
+    <span class="mono">Release-Pipeline · Claude Code</span>
+  </div>
+  <div class="raster">
+    <div class="feld"><span class="nr mono">01</span><h2>Idee</h2><p>Eingesprochen, oft vom iPhone</p><span class="skill mono">/neuer-song</span></div>
+    <div class="feld"><span class="nr mono">02</span><h2>Entwurf</h2><p>Titel, Lyrics und Stil, in Feedback-Runden</p><span class="skill mono">/neuer-song</span></div>
+    <div class="feld"><span class="frei mono">Freigabe</span><span class="nr mono">03</span><h2>Suno</h2><p>Generieren, Varianten vergleichen</p><span class="skill mono">/suno-generieren</span></div>
+    <div class="feld"><span class="frei mono">Freigabe</span><span class="nr mono">04</span><h2>Download</h2><p>WAV, umgerechnet auf 44,1 kHz / 16 Bit</p><span class="skill mono">/suno-download</span></div>
+    <div class="feld"><span class="frei mono">Auf Anfrage</span><span class="nr mono">05</span><h2>Cover</h2><p>Mit ChatGPT, 3000 × 3000, Amuse-konform</p><span class="skill mono">/cover</span></div>
+    <div class="feld"><span class="frei mono">Go</span><span class="nr mono">06</span><h2>Release</h2><p>Vorab-Prüfung, Amuse-Formular, Absenden</p><span class="skill mono">/release</span></div>
+    <div class="feld"><span class="nr mono">07</span><h2>Lyrics</h2><p>Über Musixmatch, zeitsynchron</p><span class="skill mono">/lyrics-nachreichen</span></div>
+    <div class="feld ziel"><span class="nr mono">08</span><h2>Spotify &amp; Co.</h2><p>Über Amuse an die Streamingdienste</p><span class="skill mono">tschortsch</span></div>
+  </div>
+  <div class="fuss mono">
+    <span>song.json: <b>entwurf → generiert → heruntergeladen → cover → bereit → veroeffentlicht</b></span>
+  </div>
+</body>
+</html>

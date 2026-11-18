@@ -36,6 +36,8 @@ const ZIELE = {
     url: "https://open.spotify.com/artist/4StU5O0sjXiyuYFDU4IFiL",
     verstecke: '#onetrust-consent-sdk, aside[data-testid="now-playing-bar"]',
   },
+  // Keine Live-Seite (Repo privat): eigene Ablauf-Grafik aus werkzeug/grafiken
+  "release-pipeline": { url: pathToFileURL(join(wurzel, "werkzeug/grafiken/release-pipeline.html")).href },
 };
 
 const warte = (ms) => new Promise((r) => setTimeout(r, ms));

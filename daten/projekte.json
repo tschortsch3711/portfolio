@@ -252,6 +252,43 @@
             { "was": "Repo", "url": "https://github.com/tschortsch3711/this-is-tschortsch" }
           ],
           "bildAlt": "Spotify-Profil von tschortsch mit Künstlerbild, Name und den beliebtesten Songs"
+        },
+        {
+          "slug": "release-pipeline",
+          "name": "Release-Pipeline",
+          "satz": "Wie aus einer Songidee ein Release auf Spotify wird, mit Claude Code.",
+          "aussage": "Claude Code bringt die Songs auf Spotify, aber nur nach Freigabe.",
+          "unter": "Ein Claude-Code-Projekt mit neun Skills und 21 Skripten. Es bedient Suno, ChatGPT, Amuse und Musixmatch im Browser. Generiert, heruntergeladen und abgeschickt wird nur nach ausdrücklicher Freigabe.",
+          "fakten": {
+            "was": "Release-Pipeline für die Songs von tschortsch",
+            "fuerWen": "Für den eigenen Gebrauch, oft per Sprache vom iPhone aus",
+            "womit": "Claude Code, Claude in Chrome, Python und JavaScript",
+            "stand": "In Gebrauch seit September 2026, Repo privat"
+          },
+          "absaetze": [
+            {
+              "titel": "Jeder Schritt ein Skill",
+              "text": "Neuer Song, Generieren, Import, Download, Cover, Cover bereinigen, Analyse, Release und Lyrics nachreichen sind eigene Skills. Zu jedem Song gibt es eine song.json, die den Stand vom Entwurf bis zur Veröffentlichung festhält."
+            },
+            {
+              "titel": "Freigabe statt Autopilot",
+              "text": "Bei Suno wird erst nach einem ausdrücklichen „Los“ generiert und nur auf Anweisung heruntergeladen. Bei Amuse geht nichts raus, bevor eine vollständige Zusammenfassung gezeigt wurde und ein „Go“ kam. Captchas löst der Mensch selbst."
+            },
+            {
+              "titel": "Skript vor Klick",
+              "text": "Im Browser arbeitet Claude möglichst per Skript über Beschriftungen und Formularfelder statt über Klicks auf Koordinaten. Jeder neu gefundene Weg wandert als Helfer in die Skripte und in den passenden Skill."
+            },
+            {
+              "titel": "Nach dem Release",
+              "text": "Spotify zeigt Lyrics nur über Musixmatch. Die Pipeline holt den gesungenen Text aus Suno, prüft ihn und reicht ihn ein, zeitsynchron anhand der Zeitstempel aus Suno."
+            }
+          ],
+          "links": [
+            { "was": "Die Musik dazu", "url": "https://tschortsch3711.github.io/portfolio/projekte/this-is-tschortsch/" },
+            { "was": "Spotify", "url": "https://open.spotify.com/artist/4StU5O0sjXiyuYFDU4IFiL" }
+          ],
+          "bildUnter": "Ablauf der Pipeline, eigene Grafik",
+          "bildAlt": "Ablauf der Pipeline in acht Feldern: Idee, Entwurf, Suno, Download, Cover, Release, Lyrics und Spotify. Suno und Download tragen das Etikett Freigabe, Cover das Etikett Auf Anfrage, Release das Etikett Go."
         }
       ]
     }
