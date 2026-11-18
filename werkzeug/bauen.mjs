@@ -91,7 +91,7 @@ function startseite() {
         .map(
           (p) => `        <li>
           <a class="kachel" href="projekte/${p.slug}/">
-            <img src="assets/bilder/${p.slug}-800.webp" width="800" height="500" alt="" loading="lazy">
+            <img src="assets/bilder/${p.slug}-800.webp" width="800" height="500" alt="">
             <span class="kachel-text">
               <span class="kachel-nr" aria-hidden="true">${p.nr}</span>
               <span class="kachel-name">${esc(p.name)}</span>
