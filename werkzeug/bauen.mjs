@@ -20,7 +20,7 @@ const ohneProtokoll = (url) => url.replace(/^https?:\/\//, "").replace(/\/$/, ""
 const nachSlug = {};
 for (const g of gruppen) for (const p of g.projekte) nachSlug[p.slug] = { ...p, gruppe: g };
 const { start } = daten;
-const reihenfolge = [...start.oben, ...start.unten];
+const reihenfolge = start.reihenfolge;
 const fehlt = Object.keys(nachSlug).filter((s) => !reihenfolge.includes(s));
 if (fehlt.length) throw new Error(`In daten.start fehlen: ${fehlt.join(", ")}`);
 const alle = reihenfolge.map((s, i) => ({ ...nachSlug[s], nr: nr(i + 1) }));
@@ -67,9 +67,8 @@ function kopf(wurzelPfad) {
 function fuss() {
   return `<footer class="fuss">
   <div class="rahmen">
-    <span>${esc(seite.name)} · Freising</span>
-    <span>Statische Seite, ohne Tracking</span>
-    <a href="${esc(seite.github)}">github.com/tschortsch3711</a>
+    <span>${esc(seite.einleitungTitel)}</span>
+    <a href="${esc(seite.github)}">${esc(ohneProtokoll(seite.github))}</a>
   </div>
 </footer>`;
 }
@@ -87,34 +86,45 @@ ${koerper}
 
 // Startseite ----------------------------------------------------------------
 function startseite() {
-  // Kontaktabzug in vier Spalten: oben die neuesten Projekte mit ihrer Gruppe als Etikett,
-  // darunter eine eigene Zeile für eine Gruppe (daten.start.untenGruppe) und ganz unten rechts die Info-Kachel.
-  const kachel = (p, mitGruppe) => `      <li>
-        <a class="kachel" href="projekte/${p.slug}/">
-          <img src="assets/bilder/${p.slug}-800.webp" width="800" height="500" alt="">
-          <span class="kachel-text">
-            <span class="kachel-nr" aria-hidden="true">${p.nr}</span>
-            <span class="kachel-name">${esc(p.name)}</span>${mitGruppe ? `\n            <span class="kachel-gruppe etikett">${esc(p.gruppe.name)}</span>` : ""}
-            <span class="kachel-satz">${esc(p.satz)}</span>
-          </span>
-        </a>
-      </li>`;
-  const untenGruppe = gruppen.find((g) => g.id === start.untenGruppe);
-  const oben = alle.slice(0, start.oben.length);
-  const unten = alle.slice(start.oben.length);
-  const spalten = `  <ul class="raster-oben" aria-label="Neueste Projekte">
-${oben.map((p) => kachel(p, true)).join("\n")}
-  </ul>
-  <section class="raster-unten" aria-labelledby="g-${untenGruppe.id}">
-    <h2 class="etikett zeile-kopf" id="g-${untenGruppe.id}">${esc(untenGruppe.name)}<span aria-hidden="true">${unten.length}</span></h2>
-    <ul>
-${unten.map((p) => kachel(p, false)).join("\n")}
-      <li class="kachel kachel-info">
-        <p>${alle.length} Projekte, statisch und ohne Tracking.</p>
-        <a href="${esc(seite.github)}">Alles auf GitHub →</a>
-      </li>
-    </ul>
-  </section>`;
+  // Kontaktabzug: ein Raster mit vier Spalten, jede Kachel trägt ihre Gruppe als Etikett.
+  // Die Reihenfolge steht in daten.start.reihenfolge. Am Ende steht der runde Stempel mit dem Link zu GitHub.
+  const kachel = (p) => `  <li>
+    <a class="kachel" href="projekte/${p.slug}/">
+      <img src="assets/bilder/${p.slug}-800.webp" width="800" height="500" alt=""${p.bildPosition ? ` style="object-position: ${esc(p.bildPosition)}"` : ""}>
+      <span class="kachel-text">
+        <span class="kachel-nr" aria-hidden="true">${p.nr}</span>
+        <span class="kachel-name">${esc(p.name)}</span>
+        <span class="kachel-gruppe etikett">${esc(p.gruppe.name)}</span>
+        <span class="kachel-satz">${esc(p.satz)}</span>
+      </span>
+    </a>
+  </li>`;
+
+  // Scroll-Fokus für schmale Bildschirme (Handy, Tablet), wo es kein Mouse-over gibt:
+  // Die Zeile an der Fokuslinie bekommt die Klasse "fokus". Die Linie wandert beim Scrollen
+  // von 30 % auf 75 % der Bildschirmhöhe, damit auch die letzte Zeile drankommt.
+  const fokusSkript = `<script>
+(() => {
+  const schmal = matchMedia("(max-width: 64rem)");
+  const kacheln = [...document.querySelectorAll("a.kachel")];
+  function fokus() {
+    let zeile = null;
+    if (schmal.matches) {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      const linie = innerHeight * (0.3 + 0.45 * (max > 0 ? scrollY / max : 0));
+      let abstand = Infinity;
+      for (const k of kacheln) {
+        const r = k.getBoundingClientRect(), a = Math.abs(r.top + r.height / 2 - linie);
+        if (a < abstand) { abstand = a; zeile = r.top; }
+      }
+    }
+    for (const k of kacheln) k.classList.toggle("fokus", zeile !== null && Math.abs(k.getBoundingClientRect().top - zeile) < 4);
+  }
+  addEventListener("scroll", fokus, { passive: true });
+  addEventListener("resize", fokus);
+  fokus();
+})();
+</script>`;
 
   const koerper = `<div class="start">
 ${kopf("./")}
@@ -122,11 +132,21 @@ ${kopf("./")}
   <h1>${esc(seite.einleitungTitel)}</h1>
   <p>${esc(seite.einleitung)}</p>
 </section>
-<main id="inhalt" class="raster">
-${spalten}
+<main id="inhalt">
+<ul class="raster">
+${alle.map(kachel).join("\n")}
+  <li class="stempel-platz">
+    <a class="stempel" href="${esc(seite.github)}">
+      <span class="etikett">Mehr auf</span>
+      <span class="stempel-name">GitHub</span>
+      <span aria-hidden="true">→</span>
+    </a>
+  </li>
+</ul>
 </main>
 ${fuss()}
-</div>`;
+</div>
+${fokusSkript}`;
 
   return seitenRahmen(
     kopfdaten({

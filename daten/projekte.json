@@ -10,9 +10,11 @@
     "bilderStand": "18.11.2026"
   },
   "start": {
-    "oben": ["shisha-as-a-service", "3dmensional", "lagerhimmel", "ganachekatze", "von-ka-zu-ki", "fleischbibel", "this-is-tschortsch", "release-pipeline"],
-    "untenGruppe": "betriebsrat",
-    "unten": ["br-or-not-2-br", "br-selbstcheck", "br-simulator"]
+    "reihenfolge": [
+      "3dmensional", "lagerhimmel", "ganachekatze", "shisha-as-a-service",
+      "von-ka-zu-ki", "fleischbibel", "this-is-tschortsch", "release-pipeline",
+      "br-or-not-2-br", "br-selbstcheck", "br-simulator"
+    ]
   },
   "gruppen": [
     {
@@ -83,6 +85,7 @@
         },
         {
           "slug": "ganachekatze",
+          "bildPosition": "center top",
           "name": "Ganachekatze",
           "satz": "Backblog, Rezepte und Shop rund ums Backen mit Wow-Effekt.",
           "aussage": "Ein Backblog mit Rezepten, Shop und eigenem Backbuch.",
@@ -218,10 +221,11 @@
     },
     {
       "id": "musik",
-      "name": "Musik",
+      "name": "Kunst & Musik",
       "projekte": [
         {
           "slug": "this-is-tschortsch",
+          "bildPosition": "center top",
           "name": "This is tschortsch",
           "satz": "Eigene Songs auf Spotify, entstanden mit Suno.",
           "aussage": "Songs als tschortsch, von der Idee bis auf Spotify.",
@@ -293,7 +297,7 @@
     },
     {
       "id": "betriebsrat",
-      "name": "Betriebsrat",
+      "name": "Ehrenamt",
       "projekte": [
         {
           "slug": "br-simulator",
@@ -329,6 +333,7 @@
         },
         {
           "slug": "br-selbstcheck",
+          "bildPosition": "center top",
           "name": "BR-Selbstcheck",
           "satz": "Ein Selbstcheck für alle, die über eine Kandidatur zum Betriebsrat nachdenken.",
           "aussage": "Passt eine Kandidatur zum Betriebsrat zu mir?",
@@ -361,6 +366,7 @@
         },
         {
           "slug": "br-or-not-2-br",
+          "bildPosition": "center top",
           "name": "BR or not 2 BR?",
           "satz": "Eine Entscheidungshilfe mit Augenzwinkern, ob man zur Betriebsratswahl geht.",
           "aussage": "Zur Betriebsratswahl gehen? Zwölf Fragen helfen beim Entscheiden.",

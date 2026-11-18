@@ -21,7 +21,7 @@ Alle Werte stehen als CSS-Variablen in [`assets/css/tokens.css`](assets/css/toke
 
 **Kopfzeile** `.kopf`: Wortmarke oben links (schwarzes Kästchen „nd“ plus Name). Sie führt immer zur Startseite und ist der Weg zurück. Rechts nur der Link zu GitHub. Unten eine 2-px-Linie.
 
-**Startseite als Kontaktabzug** `.start`, `.raster`, `.spalte`, `.kachel`: Auf dem Desktop passen alle Projekte auf einen Bildschirm, in vier Spalten. Die Reihenfolge steht in `daten/projekte.json` unter `start`: oben zwei Zeilen mit den neuesten Projekten, jede Kachel mit ihrer Gruppe als Etikett, darunter eine eigene Zeile für eine Gruppe (zurzeit Betriebsrat). Ganz unten rechts steht die schwarze Info-Kachel. Danach richten sich auch die Nummern und „Nächstes Projekt“. Eine Kachel zeigt den Screenshot in Graustufen mit Nummer und Name. Beim Überfahren wird er farbig, die Leiste wird schwarz und der Satz zum Projekt erscheint. Fehlen in einer Gruppe Projekte, füllt eine schwarze Info-Kachel die Lücke. Unter 64rem gibt es zwei Spalten, unter 40rem stehen die Gruppen untereinander, mit je zwei Kacheln in Farbe.
+**Startseite als Kontaktabzug** `.start`, `.raster`, `.kachel`, `.stempel`: Ein Raster mit vier Spalten, auf dem Desktop passt alles auf einen Bildschirm. Die Reihenfolge steht in `daten/projekte.json` unter `start.reihenfolge`, danach richten sich auch die Nummern und „Nächstes Projekt“. Jede Kachel zeigt den Screenshot in Farbe und darunter eine Leiste mit Nummer, Name und Gruppe. Beim Überfahren wird die Leiste schwarz und der Satz zum Projekt klappt auf. Bis 64rem Breite (Handy, Tablet) übernimmt das der Scroll-Fokus: Ein kleines Skript in der Startseite gibt der Zeile an der Fokuslinie die Klasse `fokus`. Die Kacheln werden nie höher als das Bildformat 16:10, damit kein Screenshot seitlich beschnitten wird. Welcher Teil des Bildes bei flachen Kacheln zu sehen ist, steuert pro Projekt das optionale Feld `bildPosition`. Auf dem letzten Platz steht der runde Stempel mit dem Link zu GitHub. Er ist die eine bewusste Ausnahme von „fast alles ist eckig“.
 
 **Projektzeile** `.zeile` (nicht mehr auf der Startseite, die Stile nutzt noch der Weiter-Block): Ein ganzer Link pro Projekt mit Nummer, Name, einem Satz und Pfeil. Beim Überfahren dreht sich die Zeile auf Weiß auf Schwarz. Auf dem Handy rutscht der Satz unter den Namen.
 
@@ -33,7 +33,7 @@ Alle Werte stehen als CSS-Variablen in [`assets/css/tokens.css`](assets/css/toke
 
 **Weiter** `.weiter`: Zeilen im Stil der Projektzeile mit Live-Seite, Repo (nur wenn öffentlich) und dem nächsten Projekt.
 
-**Fußzeile** `.fuss`: Name, Hinweis auf kein Tracking, GitHub.
+**Fußzeile** `.fuss`: Links der Leitsatz, rechts der Link zu GitHub.
 
 ## Regeln
 
