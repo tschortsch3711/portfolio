@@ -21,7 +21,9 @@ Alle Werte stehen als CSS-Variablen in [`assets/css/tokens.css`](assets/css/toke
 
 **Kopfzeile** `.kopf`: Wortmarke oben links (schwarzes Kästchen „nd“ plus Name). Sie führt immer zur Startseite und ist der Weg zurück. Rechts nur der Link zu GitHub. Unten eine 2-px-Linie.
 
-**Projektzeile** `.zeile`: Ein ganzer Link pro Projekt mit Nummer, Name, einem Satz und Pfeil. Beim Überfahren dreht sich die Zeile auf Weiß auf Schwarz. Auf dem Handy rutscht der Satz unter den Namen.
+**Startseite als Kontaktabzug** `.start`, `.raster`, `.spalte`, `.kachel`: Auf dem Desktop passen alle Projekte auf einen Bildschirm, mit einer Spalte pro Gruppe und bis zu drei Kacheln. Eine Kachel zeigt den Screenshot in Graustufen mit Nummer und Name. Beim Überfahren wird er farbig, die Leiste wird schwarz und der Satz zum Projekt erscheint. Fehlen in einer Gruppe Projekte, füllt eine schwarze Info-Kachel die Lücke. Unter 64rem gibt es zwei Spalten, unter 40rem stehen die Gruppen untereinander, mit je zwei Kacheln in Farbe.
+
+**Projektzeile** `.zeile` (nicht mehr auf der Startseite, die Stile nutzt noch der Weiter-Block): Ein ganzer Link pro Projekt mit Nummer, Name, einem Satz und Pfeil. Beim Überfahren dreht sich die Zeile auf Weiß auf Schwarz. Auf dem Handy rutscht der Satz unter den Namen.
 
 **Projekt-Hero** `.held`: Etikett mit Gruppe und Nummer, darunter die Aussage in einem Satz in der größten Stufe, dann ein kurzer Untertitel und ein Screenshot der Live-Seite mit 1-px-Rahmen.
 

@@ -82,45 +82,52 @@ ${koerper}
 
 // Startseite ----------------------------------------------------------------
 function startseite() {
-  const gruppenHtml = gruppen
+  // Kontaktabzug: eine Spalte pro Gruppe, eine Kachel pro Projekt.
+  // Hat eine Gruppe weniger als drei Projekte, füllt eine schwarze Info-Kachel die Lücke.
+  const spalten = gruppen
     .map((g) => {
-      const zeilen = alle
+      const kacheln = alle
         .filter((p) => p.gruppe.id === g.id)
         .map(
           (p) => `        <li>
-          <a class="zeile" href="projekte/${p.slug}/">
-            <span class="zeile-nr" aria-hidden="true">${p.nr}</span>
-            <span class="zeile-name">${esc(p.name)}</span>
-            <span class="zeile-satz">${esc(p.satz)}</span>
-            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          <a class="kachel" href="projekte/${p.slug}/">
+            <img src="assets/bilder/${p.slug}-800.webp" width="800" height="500" alt="" loading="lazy">
+            <span class="kachel-text">
+              <span class="kachel-nr" aria-hidden="true">${p.nr}</span>
+              <span class="kachel-name">${esc(p.name)}</span>
+              <span class="kachel-satz">${esc(p.satz)}</span>
+            </span>
           </a>
         </li>`
         )
         .join("\n");
-      return `    <section class="gruppe" aria-labelledby="g-${g.id}">
-      <div class="gruppe-kopf">
-        <h2 class="etikett" id="g-${g.id}">${esc(g.name)}</h2>
-        <span class="etikett" aria-hidden="true">${g.projekte.length}</span>
-      </div>
+      const info =
+        g.projekte.length < 3
+          ? `\n        <li class="kachel kachel-info">
+          <p>${alle.length} Projekte, statisch und ohne Tracking.</p>
+          <a href="${esc(seite.github)}">Alles auf GitHub →</a>
+        </li>`
+          : "";
+      return `    <section class="spalte" aria-labelledby="g-${g.id}">
+      <h2 class="etikett spalte-kopf" id="g-${g.id}">${esc(g.name)}<span aria-hidden="true">${g.projekte.length}</span></h2>
       <ul>
-${zeilen}
+${kacheln}${info}
       </ul>
     </section>`;
     })
-    .join("\n\n");
+    .join("\n");
 
-  const koerper = `${kopf("./")}
-<main id="inhalt">
-  <div class="rahmen">
-    <section class="einleitung">
-      <h1>${esc(seite.einleitungTitel)}</h1>
-      <p>${esc(seite.einleitung)}</p>
-    </section>
-
-${gruppenHtml}
-  </div>
+  const koerper = `<div class="start">
+${kopf("./")}
+<section class="einleitung">
+  <h1>${esc(seite.einleitungTitel)}</h1>
+  <p>${esc(seite.einleitung)}</p>
+</section>
+<main id="inhalt" class="raster">
+${spalten}
 </main>
-${fuss()}`;
+${fuss()}
+</div>`;
 
   return seitenRahmen(
     kopfdaten({

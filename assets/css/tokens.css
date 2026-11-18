@@ -60,6 +60,7 @@
 
   /* Raster */
   --breite: 60rem;
+  --breite-start: 80rem;  /* Startseite: vier Spalten nebeneinander */
   --rand: 2rem;
   --lesebreite: 38rem;
 }

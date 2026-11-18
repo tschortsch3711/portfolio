@@ -66,18 +66,81 @@ ul, ol { padding: 0; list-style: none; }
 .wortmarke:hover .wortmarke-name { text-decoration: underline; text-decoration-thickness: var(--l-fett); }
 .kopf-link { font-size: var(--t-klein); font-weight: 700; }
 
-/* Startseite ------------------------------------------------------------- */
-.einleitung { padding: var(--s-8) 0 var(--s-7); }
-.einleitung h1 {
-  font-size: var(--t-titel); line-height: var(--z-eng); letter-spacing: var(--sp-eng);
-  max-width: 18ch;
+/* Startseite: Kontaktabzug, auf dem Desktop alles auf einen Blick -------- */
+.start { min-height: 100svh; display: grid; grid-template-rows: auto auto 1fr auto; }
+.start .rahmen, .einleitung, .raster { max-width: calc(var(--breite-start) + 2 * var(--rand)); }
+.einleitung {
+  width: 100%; margin: 0 auto; padding: var(--s-6) var(--rand) var(--s-5);
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--s-6); align-items: end;
+  border-bottom: var(--l-fett) solid var(--c-tinte);
 }
-.einleitung p {
-  margin-top: var(--s-5); max-width: var(--lesebreite);
-  font-size: var(--t-gross); color: var(--c-leise);
+.einleitung h1 {
+  font-size: clamp(2rem, 4.2vw, 3.5rem); line-height: 1.02; letter-spacing: var(--sp-eng);
+  text-wrap: balance;
+}
+.einleitung p { max-width: 30rem; font-size: var(--t-gross); color: var(--c-leise); }
+
+.raster {
+  width: 100%; margin: 0 auto; padding: var(--s-5) var(--rand);
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-4);
+}
+.spalte { display: grid; grid-template-rows: auto 1fr; gap: var(--s-3); min-height: 0; }
+.spalte ul { display: grid; grid-template-rows: repeat(3, 1fr); gap: var(--s-3); min-height: 0; }
+.spalte-kopf {
+  display: flex; justify-content: space-between;
+  border-top: var(--l-fett) solid var(--c-tinte); padding-top: var(--s-2);
 }
 
-.gruppe { padding-bottom: var(--s-7); }
+/* Kachel: Screenshot in Graustufen, beim Überfahren in Farbe */
+.kachel {
+  position: relative; display: block; height: 100%; min-height: 9rem; overflow: hidden;
+  border: var(--l-duenn) solid var(--c-tinte); border-radius: var(--r-1);
+  background: var(--c-flaeche); text-decoration: none;
+}
+.kachel img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+  filter: grayscale(1) contrast(1.05); transition: filter .25s ease, transform .4s ease;
+}
+.kachel-text {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  display: grid; grid-template-columns: auto 1fr; gap: 0 var(--s-2); align-items: baseline;
+  padding: var(--s-2) var(--s-3);
+  background: var(--c-papier); border-top: var(--l-duenn) solid var(--c-tinte);
+  transition: background-color .12s ease, color .12s ease;
+}
+.kachel-nr { font-family: var(--f-mono); font-size: var(--t-klein); color: var(--c-leise); }
+.kachel-name { font-weight: 700; letter-spacing: -0.02em; }
+.kachel-satz {
+  grid-column: 1 / 3; max-height: 0; overflow: hidden;
+  font-size: var(--t-klein); line-height: 1.4; color: var(--c-leise); transition: max-height .25s ease;
+}
+.kachel:hover img, .kachel:focus-visible img { filter: none; transform: scale(1.03); }
+.kachel:hover .kachel-text, .kachel:focus-visible .kachel-text { background: var(--c-tinte); color: var(--c-papier); }
+.kachel:hover .kachel-nr, .kachel:focus-visible .kachel-nr { color: var(--c-haar); }
+.kachel:hover .kachel-satz, .kachel:focus-visible .kachel-satz { max-height: 3rem; color: var(--c-haar); }
+.kachel:focus-visible { outline-offset: 2px; }
+.kachel-info {
+  padding: var(--s-4); background: var(--c-tinte); color: var(--c-papier);
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.kachel-info a { color: var(--c-papier); font-weight: 700; }
+.start .fuss .rahmen { padding-top: var(--s-3); padding-bottom: var(--s-3); }
+
+@media (max-width: 64rem) {
+  .start { display: block; }
+  .raster { grid-template-columns: repeat(2, 1fr); row-gap: var(--s-6); }
+}
+@media (max-width: 40rem) {
+  .einleitung { grid-template-columns: 1fr; gap: var(--s-3); }
+  .raster { grid-template-columns: 1fr; }
+  .spalte ul { grid-template-columns: 1fr 1fr; grid-template-rows: none; }
+  .kachel { min-height: 0; }
+  .kachel img { position: static; height: 7.5rem; }
+  .kachel-text { position: static; }
+  .kachel-satz { max-height: none; }
+}
+@media (hover: none) { .kachel img { filter: none; } }
 .gruppe-kopf {
   display: flex; justify-content: space-between; align-items: baseline; gap: var(--s-4);
   border-top: var(--l-fett) solid var(--c-tinte);

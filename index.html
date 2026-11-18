@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://tschortsch3711.github.io/portfolio/assets/bilder/og/start.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Nikola Djordjevic: Webseiten, Wissen und Dinge aus dem Drucker.">
+<meta property="og:image:alt" content="Nikola Djordjevic: Ideen, die nicht in der Schublade bleiben.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 <link rel="preload" href="./fonts/Sen/Sen-Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="./assets/css/site.css">
 </head>
 <body>
+<div class="start">
 <a class="springen" href="#inhalt">Zum Inhalt springen</a>
 <header class="kopf">
   <div class="rahmen">
@@ -36,137 +37,145 @@
     <a class="kopf-link" href="https://github.com/tschortsch3711">GitHub</a>
   </div>
 </header>
-<main id="inhalt">
-  <div class="rahmen">
-    <section class="einleitung">
-      <h1>Webseiten, Wissen und Dinge aus dem Drucker.</h1>
-      <p>Ich bin Nikola, Designer und Maker aus Freising bei München. Hier sind meine öffentlichen Webprojekte, jedes mit einer eigenen Seite.</p>
-    </section>
-
-    <section class="gruppe" aria-labelledby="g-betriebe">
-      <div class="gruppe-kopf">
-        <h2 class="etikett" id="g-betriebe">Betriebe &amp; Handwerk</h2>
-        <span class="etikett" aria-hidden="true">3</span>
-      </div>
+<section class="einleitung">
+  <h1>Ideen, die nicht in der Schublade bleiben.</h1>
+  <p>Ich bin Nikola, Designer und Maker aus Freising bei München. KI nutze ich als Werkzeug, die Ideen sind meine. Hier ist, was daraus geworden ist, jedes Projekt mit eigener Seite.</p>
+</section>
+<main id="inhalt" class="raster">
+    <section class="spalte" aria-labelledby="g-betriebe">
+      <h2 class="etikett spalte-kopf" id="g-betriebe">Betriebe &amp; Handwerk<span aria-hidden="true">3</span></h2>
       <ul>
         <li>
-          <a class="zeile" href="projekte/3dmensional/">
-            <span class="zeile-nr" aria-hidden="true">01</span>
-            <span class="zeile-name">3Dmensional</span>
-            <span class="zeile-satz">3D-Druck, Konstruktion und Gravur in Kranzberg bei Freising.</span>
-            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          <a class="kachel" href="projekte/3dmensional/">
+            <img src="assets/bilder/3dmensional-800.webp" width="800" height="500" alt="" loading="lazy">
+            <span class="kachel-text">
+              <span class="kachel-nr" aria-hidden="true">01</span>
+              <span class="kachel-name">3Dmensional</span>
+              <span class="kachel-satz">3D-Druck, Konstruktion und Gravur in Kranzberg bei Freising.</span>
+            </span>
           </a>
         </li>
         <li>
-          <a class="zeile" href="projekte/lagerhimmel/">
-            <span class="zeile-nr" aria-hidden="true">02</span>
-            <span class="zeile-name">Lagerhimmel</span>
-            <span class="zeile-satz">Abschließbare Lagerhallen und Garagen in Kranzberg.</span>
-            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          <a class="kachel" href="projekte/lagerhimmel/">
+            <img src="assets/bilder/lagerhimmel-800.webp" width="800" height="500" alt="" loading="lazy">
+            <span class="kachel-text">
+              <span class="kachel-nr" aria-hidden="true">02</span>
+              <span class="kachel-name">Lagerhimmel</span>
+              <span class="kachel-satz">Abschließbare Lagerhallen und Garagen in Kranzberg.</span>
+            </span>
           </a>
         </li>
         <li>
-          <a class="zeile" href="projekte/ganachekatze/">
-            <span class="zeile-nr" aria-hidden="true">03</span>
-            <span class="zeile-name">Ganachekatze</span>
-            <span class="zeile-satz">Backblog, Rezepte und Shop rund ums Backen mit Wow-Effekt.</span>
-            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          <a class="kachel" href="projekte/ganachekatze/">
+            <img src="assets/bilder/ganachekatze-800.webp" width="800" height="500" alt="" loading="lazy">
+            <span class="kachel-text">
+              <span class="kachel-nr" aria-hidden="true">03</span>
+              <span class="kachel-name">Ganachekatze</span>
+              <span class="kachel-satz">Backblog, Rezepte und Shop rund ums Backen mit Wow-Effekt.</span>
+            </span>
           </a>
         </li>
       </ul>
     </section>
-
-    <section class="gruppe" aria-labelledby="g-open-source">
-      <div class="gruppe-kopf">
-        <h2 class="etikett" id="g-open-source">Open Source</h2>
-        <span class="etikett" aria-hidden="true">3</span>
-      </div>
+    <section class="spalte" aria-labelledby="g-open-source">
+      <h2 class="etikett spalte-kopf" id="g-open-source">Open Source<span aria-hidden="true">3</span></h2>
       <ul>
         <li>
-          <a class="zeile" href="projekte/von-ka-zu-ki/">
-            <span class="zeile-nr" aria-hidden="true">04</span>
-            <span class="zeile-name">Von K.A. zu K.I.</span>
-            <span class="zeile-satz">Ein verständliches KI-Glossar, über bekannte Fachwelten greifbar gemacht.</span>
-            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          <a class="kachel" href="projekte/von-ka-zu-ki/">
+            <img src="assets/bilder/von-ka-zu-ki-800.webp" width="800" height="500" alt="" loading="lazy">
+            <span class="kachel-text">
+              <span class="kachel-nr" aria-hidden="true">04</span>
+              <span class="kachel-name">Von K.A. zu K.I.</span>
+              <span class="kachel-satz">Ein verständliches KI-Glossar, über bekannte Fachwelten greifbar gemacht.</span>
+            </span>
           </a>
         </li>
         <li>
-          <a class="zeile" href="projekte/fleischbibel/">
-            <span class="zeile-nr" aria-hidden="true">05</span>
-            <span class="zeile-name">Fleischbibel</span>
-            <span class="zeile-satz">Die zentrale Dokumentation der Fleischgemeinschaft.</span>
-            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          <a class="kachel" href="projekte/fleischbibel/">
+            <img src="assets/bilder/fleischbibel-800.webp" width="800" height="500" alt="" loading="lazy">
+            <span class="kachel-text">
+              <span class="kachel-nr" aria-hidden="true">05</span>
+              <span class="kachel-name">Fleischbibel</span>
+              <span class="kachel-satz">Die zentrale Dokumentation der Fleischgemeinschaft.</span>
+            </span>
           </a>
         </li>
         <li>
-          <a class="zeile" href="projekte/shisha-as-a-service/">
-            <span class="zeile-nr" aria-hidden="true">06</span>
-            <span class="zeile-name">Shisha as a Service</span>
-            <span class="zeile-satz">Vier Shisha-Bars zur Wahl, zwischen Freising und Regensburg.</span>
-            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          <a class="kachel" href="projekte/shisha-as-a-service/">
+            <img src="assets/bilder/shisha-as-a-service-800.webp" width="800" height="500" alt="" loading="lazy">
+            <span class="kachel-text">
+              <span class="kachel-nr" aria-hidden="true">06</span>
+              <span class="kachel-name">Shisha as a Service</span>
+              <span class="kachel-satz">Vier Shisha-Bars zur Wahl, zwischen Freising und Regensburg.</span>
+            </span>
           </a>
         </li>
       </ul>
     </section>
-
-    <section class="gruppe" aria-labelledby="g-betriebsrat">
-      <div class="gruppe-kopf">
-        <h2 class="etikett" id="g-betriebsrat">Betriebsrat</h2>
-        <span class="etikett" aria-hidden="true">3</span>
-      </div>
+    <section class="spalte" aria-labelledby="g-betriebsrat">
+      <h2 class="etikett spalte-kopf" id="g-betriebsrat">Betriebsrat<span aria-hidden="true">3</span></h2>
       <ul>
         <li>
-          <a class="zeile" href="projekte/br-simulator/">
-            <span class="zeile-nr" aria-hidden="true">07</span>
-            <span class="zeile-name">BR-Simulator</span>
-            <span class="zeile-satz">Eine Woche Betriebsratsarbeit als Text-Simulation im Browser.</span>
-            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          <a class="kachel" href="projekte/br-simulator/">
+            <img src="assets/bilder/br-simulator-800.webp" width="800" height="500" alt="" loading="lazy">
+            <span class="kachel-text">
+              <span class="kachel-nr" aria-hidden="true">07</span>
+              <span class="kachel-name">BR-Simulator</span>
+              <span class="kachel-satz">Eine Woche Betriebsratsarbeit als Text-Simulation im Browser.</span>
+            </span>
           </a>
         </li>
         <li>
-          <a class="zeile" href="projekte/br-selbstcheck/">
-            <span class="zeile-nr" aria-hidden="true">08</span>
-            <span class="zeile-name">BR-Selbstcheck</span>
-            <span class="zeile-satz">Ein Selbstcheck für alle, die über eine Kandidatur zum Betriebsrat nachdenken.</span>
-            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          <a class="kachel" href="projekte/br-selbstcheck/">
+            <img src="assets/bilder/br-selbstcheck-800.webp" width="800" height="500" alt="" loading="lazy">
+            <span class="kachel-text">
+              <span class="kachel-nr" aria-hidden="true">08</span>
+              <span class="kachel-name">BR-Selbstcheck</span>
+              <span class="kachel-satz">Ein Selbstcheck für alle, die über eine Kandidatur zum Betriebsrat nachdenken.</span>
+            </span>
           </a>
         </li>
         <li>
-          <a class="zeile" href="projekte/br-or-not-2-br/">
-            <span class="zeile-nr" aria-hidden="true">09</span>
-            <span class="zeile-name">BR or not 2 BR?</span>
-            <span class="zeile-satz">Eine Entscheidungshilfe mit Augenzwinkern, ob man zur Betriebsratswahl geht.</span>
-            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          <a class="kachel" href="projekte/br-or-not-2-br/">
+            <img src="assets/bilder/br-or-not-2-br-800.webp" width="800" height="500" alt="" loading="lazy">
+            <span class="kachel-text">
+              <span class="kachel-nr" aria-hidden="true">09</span>
+              <span class="kachel-name">BR or not 2 BR?</span>
+              <span class="kachel-satz">Eine Entscheidungshilfe mit Augenzwinkern, ob man zur Betriebsratswahl geht.</span>
+            </span>
           </a>
         </li>
       </ul>
     </section>
-
-    <section class="gruppe" aria-labelledby="g-musik">
-      <div class="gruppe-kopf">
-        <h2 class="etikett" id="g-musik">Musik</h2>
-        <span class="etikett" aria-hidden="true">2</span>
-      </div>
+    <section class="spalte" aria-labelledby="g-musik">
+      <h2 class="etikett spalte-kopf" id="g-musik">Musik<span aria-hidden="true">2</span></h2>
       <ul>
         <li>
-          <a class="zeile" href="projekte/this-is-tschortsch/">
-            <span class="zeile-nr" aria-hidden="true">10</span>
-            <span class="zeile-name">This is tschortsch</span>
-            <span class="zeile-satz">Eigene Songs auf Spotify, entstanden mit Suno.</span>
-            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          <a class="kachel" href="projekte/this-is-tschortsch/">
+            <img src="assets/bilder/this-is-tschortsch-800.webp" width="800" height="500" alt="" loading="lazy">
+            <span class="kachel-text">
+              <span class="kachel-nr" aria-hidden="true">10</span>
+              <span class="kachel-name">This is tschortsch</span>
+              <span class="kachel-satz">Eigene Songs auf Spotify, entstanden mit Suno.</span>
+            </span>
           </a>
         </li>
         <li>
-          <a class="zeile" href="projekte/release-pipeline/">
-            <span class="zeile-nr" aria-hidden="true">11</span>
-            <span class="zeile-name">Release-Pipeline</span>
-            <span class="zeile-satz">Wie aus einer Songidee ein Release auf Spotify wird, mit Claude Code.</span>
-            <span class="zeile-pfeil" aria-hidden="true">→</span>
+          <a class="kachel" href="projekte/release-pipeline/">
+            <img src="assets/bilder/release-pipeline-800.webp" width="800" height="500" alt="" loading="lazy">
+            <span class="kachel-text">
+              <span class="kachel-nr" aria-hidden="true">11</span>
+              <span class="kachel-name">Release-Pipeline</span>
+              <span class="kachel-satz">Wie aus einer Songidee ein Release auf Spotify wird, mit Claude Code.</span>
+            </span>
           </a>
+        </li>
+        <li class="kachel kachel-info">
+          <p>11 Projekte, statisch und ohne Tracking.</p>
+          <a href="https://github.com/tschortsch3711">Alles auf GitHub →</a>
         </li>
       </ul>
     </section>
-  </div>
 </main>
 <footer class="fuss">
   <div class="rahmen">
@@ -175,5 +184,6 @@
     <a href="https://github.com/tschortsch3711">github.com/tschortsch3711</a>
   </div>
 </footer>
+</div>
 </body>
 </html>
