@@ -10,7 +10,7 @@ Alle Werte stehen als CSS-Variablen in [`assets/css/tokens.css`](assets/css/toke
 | --- | --- | --- |
 | Farben | `--c-tinte`, `--c-papier`, `--c-leise`, `--c-haar`, `--c-flaeche` | `#000`, `#fff`, `#595959` (7:1 auf Weiß), `#e3e3e3`, `#f4f4f4` |
 | Schrift | `--f-text`, `--f-mono` | Sen 400 und 700, selbst gehostet in `fonts/Sen`. Mono nur für Etiketten und Nummern |
-| Typo-Skala | `--t-klein`, `--t-text`, `--t-gross`, `--t-zwischen`, `--t-titel`, `--t-aussage` | 13, 16, 19, 24 px, Titel 32 bis 48 px, Aussage 34 bis 68 px (`clamp`) |
+| Typo-Skala | `--t-klein`, `--t-text`, `--t-gross`, `--t-zwischen`, `--t-titel`, `--t-aussage` | 13, 16, 19, 24 px, Titel 32 bis 48 px, Aussage 32 bis 60 px (`clamp`) |
 | Zeilen und Laufweite | `--z-eng`, `--z-text`, `--sp-eng`, `--sp-etikett` | 1.08 für Titel, 1.55 für Text, -0.035em für große Titel |
 | Abstände | `--s-1` bis `--s-9` | 4, 8, 12, 16, 24, 32, 48, 72, 104 px |
 | Radien | `--r-0`, `--r-1` | 0 und 2 px. Fast alles ist eckig |

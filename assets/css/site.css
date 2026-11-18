@@ -125,7 +125,8 @@ ul, ol { padding: 0; list-style: none; }
 .held h1 {
   margin-top: var(--s-4);
   font-size: var(--t-aussage); line-height: var(--z-eng); letter-spacing: var(--sp-eng);
-  max-width: 16ch;
+  max-width: 19ch;
+  text-wrap: balance;
 }
 .held-unter {
   margin-top: var(--s-5); max-width: var(--lesebreite);
@@ -185,7 +186,7 @@ ul, ol { padding: 0; list-style: none; }
 
 /* Weiter ----------------------------------------------------------------- */
 .weiter { padding-bottom: var(--s-8); }
-.weiter-liste { border-top: var(--l-fett) solid var(--c-tinte); }
+.weiter .gruppe-kopf { padding-bottom: var(--s-1); }
 .weiter-link {
   display: grid;
   grid-template-columns: minmax(10rem, 16rem) 1fr 2rem;

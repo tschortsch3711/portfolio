@@ -18,7 +18,7 @@
           "slug": "3dmensional",
           "name": "3Dmensional",
           "satz": "3D-Druck, Konstruktion und Gravur in Kranzberg bei Freising.",
-          "aussage": "Bauteile aus dem 3D-Drucker, nach Maß, aus einer Werkstatt in Kranzberg.",
+          "aussage": "Bauteile aus dem 3D-Drucker, nach Maß gemacht in Kranzberg.",
           "unter": "Prototypen, Ersatzteile, Kleinserien und Einzelstücke für Privatleute und Betriebe. Fehlt die Datei, entsteht das Teil aus Maßen, Skizze oder Original.",
           "fakten": {
             "was": "3D-Druck, Konstruktion, Lasergravur und CNC-Fräsen",
@@ -29,7 +29,7 @@
           "absaetze": [
             {
               "titel": "Vom Maß zum Teil",
-              "text": "Schwerpunkt ist der 3D-Druck mit einem Bauraum bis 360 × 360 × 360 mm. Konstruiert wird in Fusion 360, graviert auf Holz, Bambus, Leder, Acryl und Keramik. Vor jedem Auftrag gibt es ein Angebot."
+              "text": "Schwerpunkt ist der 3D-Druck mit einem Bauraum bis 360 × 360 × 360 mm. Konstruiert wird in Fusion 360, graviert auf Holz, Bambus, Leder, Acryl und Keramik. Vor jedem Auftrag gibt es ein Angebot."
             },
             {
               "titel": "Welches Material",
@@ -50,7 +50,7 @@
           "name": "Lagerhimmel",
           "satz": "Abschließbare Lagerhallen und Garagen in Kranzberg.",
           "aussage": "Eine eigene Halle mit eigenem Tor, zum Mieten in Kranzberg.",
-          "unter": "16 abschließbare Hallen mit 25 oder 40 m², eigenem Stromzähler und Starkstrom. Für Wohnmobil, Oldtimer, Möbel und Gewerbe.",
+          "unter": "16 abschließbare Hallen mit 25 oder 40 m², eigenem Stromzähler und Starkstrom. Für Wohnmobil, Oldtimer, Möbel und Gewerbe.",
           "fakten": {
             "was": "Vermietung von 16 Hallen in zwei Größen",
             "fuerWen": "Wer Wohnmobil, Auto, Möbel oder Material unterstellen will",
@@ -60,7 +60,7 @@
           "absaetze": [
             {
               "titel": "Zwei Größen, feste Preise",
-              "text": "Die kleine Halle mit rund 25 m² kostet 261,80 € im Monat, die große mit rund 40 m² 380,80 €, jeweils inklusive Umsatzsteuer. Stand 29.09.2026."
+              "text": "Die kleine Halle mit rund 25 m² kostet 261,80 € im Monat, die große mit rund 40 m² 380,80 €, jeweils inklusive Umsatzsteuer. Stand 29.09.2026."
             },
             {
               "titel": "Passt mein Wohnmobil?",

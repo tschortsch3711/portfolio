@@ -34,7 +34,7 @@
   --t-gross: 1.1875rem;   /* Einleitung, Projektname */
   --t-zwischen: 1.5rem;   /* Zwischentitel */
   --t-titel: clamp(2rem, 6vw, 3rem);         /* Startseite */
-  --t-aussage: clamp(2.125rem, 7vw, 4.25rem); /* Aussage auf der Projektseite */
+  --t-aussage: clamp(2rem, 6.4vw, 3.75rem); /* Aussage auf der Projektseite */
 
   --z-eng: 1.08;
   --z-text: 1.55;

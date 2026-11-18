@@ -11,6 +11,8 @@ const { seite, gruppen } = daten;
 
 const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+// In großen Titeln nicht am Bindestrich umbrechen ("3D-|Drucker"): Wortverbinder U+2060 dahinter
+const ohneBindestrichUmbruch = (s) => s.replace(/-(?=\p{L})/gu, "-⁠");
 const nr = (i) => String(i).padStart(2, "0");
 const ohneProtokoll = (url) => url.replace(/^https?:\/\//, "").replace(/\/$/, "");
 
@@ -178,7 +180,7 @@ function projektseite(p, i) {
   <div class="rahmen">
     <section class="held" aria-labelledby="aussage">
       <p class="etikett"><span>${esc(p.gruppe.name)}</span><span>${p.nr} / ${nr(alle.length)}</span><span>${esc(p.name)}</span></p>
-      <h1 id="aussage">${esc(p.aussage)}</h1>
+      <h1 id="aussage">${ohneBindestrichUmbruch(esc(p.aussage))}</h1>
       <p class="held-unter">${esc(p.unter)}</p>
       <figure>
         <div class="bild">
