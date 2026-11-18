@@ -22,12 +22,13 @@ const CHROME =
       ? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
       : "google-chrome");
 
-// Pro Seite: Adresse, optional ein Element, zu dem gescrollt wird, und Elemente, die ausgeblendet werden
+// Pro Seite: Adresse, optional der Text einer Überschrift, zu der gescrollt wird, und Elemente, die ausgeblendet werden
 // (Cookie-Hinweise, Lauftexte und Overlays, die im Standbild nur stören).
 const ZIELE = {
   "3dmensional": { url: "https://3dmensional.de/" },
   lagerhimmel: { url: "https://lagerhimmel.de/" },
-  ganachekatze: { url: "https://ganachekatze.de/", scrollZu: process.env.GK_SCROLL || "" },
+  // Ausschnitt ab der Überschrift des Blog-Bereichs, ohne Personenfoto
+  ganachekatze: { url: "https://ganachekatze.de/", scrollZu: "Aus dem Ofen, auf den Blog" },
   "von-ka-zu-ki": { url: "https://tschortsch3711.github.io/von-ka-zu-ki/" },
   fleischbibel: { url: "https://fleischbibel.de/" },
   "shisha-as-a-service": { url: "https://tschortsch3711.github.io/shisha-as-a-service/" },
@@ -131,11 +132,22 @@ async function screenshots(cdp, slug, z) {
   }
   let y = 0;
   if (z.scrollZu) {
+    // Einmal langsam durchscrollen, damit nachgeladene Bilder da sind
+    await cdp.senden("Runtime.evaluate", {
+      expression: `(async () => { for (let y = 0; y < document.body.scrollHeight; y += 400) { scrollTo(0, y); await new Promise(r => setTimeout(r, 250)); } scrollTo(0, 0); })()`,
+      awaitPromise: true,
+    });
+    await warte(1500);
+    // Ziel ist die Überschrift mit diesem Text, mit etwas Luft darüber
     const { result } = await cdp.senden("Runtime.evaluate", {
-      expression: `(() => { const el = document.querySelector(${JSON.stringify(z.scrollZu)}); return el ? Math.round(el.getBoundingClientRect().top + scrollY) : 0; })()`,
+      expression: `(() => { const h = [...document.querySelectorAll('h1,h2,h3')].find(e => e.textContent.includes(${JSON.stringify(z.scrollZu)})); return h ? Math.max(0, Math.round(h.getBoundingClientRect().top + scrollY - 60)) : 0; })()`,
       returnByValue: true,
     });
     y = result.value || 0;
+    // Kleine feste Knöpfe (z. B. „nach oben“) stören im Ausschnitt
+    await cdp.senden("Runtime.evaluate", {
+      expression: `(() => { for (const el of document.querySelectorAll('body *')) { const cs = getComputedStyle(el); const r = el.getBoundingClientRect(); if (cs.position === 'fixed' && r.width < 120 && r.height < 120) el.style.setProperty('visibility', 'hidden', 'important'); } })()`,
+    });
   }
   await cdp.senden("Runtime.evaluate", { expression: `window.scrollTo(0, ${y}); ${AUFRAEUMEN}` });
   await warte(1500);
