@@ -12,7 +12,7 @@
   "start": {
     "oben": ["shisha-as-a-service", "3dmensional", "lagerhimmel", "ganachekatze", "von-ka-zu-ki", "fleischbibel", "this-is-tschortsch", "release-pipeline"],
     "untenGruppe": "betriebsrat",
-    "unten": ["br-selbstcheck", "br-or-not-2-br", "br-simulator"]
+    "unten": ["br-or-not-2-br", "br-selbstcheck", "br-simulator"]
   },
   "gruppen": [
     {
