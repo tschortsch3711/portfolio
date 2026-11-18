@@ -109,7 +109,8 @@ function startseite() {
   const kacheln = [...document.querySelectorAll("a.kachel")];
   function fokus() {
     let zeile = null;
-    if (schmal.matches) {
+    // Ganz oben auf der Seite bleibt alles ruhig, der Fokus beginnt erst nach dem ersten Scrollen
+    if (schmal.matches && scrollY > 24) {
       const max = document.documentElement.scrollHeight - innerHeight;
       const linie = innerHeight * (0.3 + 0.45 * (max > 0 ? scrollY / max : 0));
       let abstand = Infinity;
