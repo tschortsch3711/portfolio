@@ -125,16 +125,18 @@ ul, ol { padding: 0; list-style: none; }
 .kachel:hover .kachel-satz, .kachel:focus-visible .kachel-satz, .kachel.fokus .kachel-satz { max-height: 4.5rem; color: var(--c-haar); }
 .kachel:focus-visible { outline-offset: 2px; }
 
-/* Stempel: runder Link zu GitHub auf dem letzten Platz im Raster */
-.stempel-platz { display: flex; align-items: center; justify-content: center; min-height: 0; }
+/* Stempel: runder Link zu GitHub auf dem letzten Platz im Raster.
+   Er wächst mit der Höhe seines Platzes, die Schrift wächst mit (Container-Einheiten). */
+.stempel-platz { display: flex; align-items: center; justify-content: center; min-height: 0; container-type: size; }
 .stempel {
-  height: 100%; max-height: 10rem; aspect-ratio: 1; border-radius: 50%;
+  height: 86%; aspect-ratio: 1; border-radius: 50%;
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--s-1);
   background: var(--c-tinte); color: var(--c-papier); text-decoration: none;
+  font-size: clamp(1rem, 8cqh, 1.75rem); line-height: 1;
   transition: transform .2s ease;
 }
-.stempel .etikett { color: var(--c-haar); }
-.stempel-name { font-size: var(--t-zwischen); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; }
+.stempel .etikett { color: var(--c-haar); font-size: clamp(var(--t-klein), 6cqh, 1.25rem); }
+.stempel-name { font-size: clamp(var(--t-zwischen), 13cqh, 3rem); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; }
 .stempel:hover, .stempel:focus-visible { transform: rotate(-6deg) scale(1.04); }
 .start .fuss .rahmen { padding-top: var(--s-3); padding-bottom: var(--s-3); }
 
@@ -145,7 +147,10 @@ ul, ol { padding: 0; list-style: none; }
   .einleitung p { font-size: var(--t-text); }
   .raster { grid-template-columns: repeat(2, 1fr); grid-auto-rows: auto; max-height: none; }
   .kachel { height: auto; min-height: 0; aspect-ratio: 16 / 10; }
-  .stempel { height: 9rem; }
+  .stempel-platz { container-type: normal; }
+  .stempel { height: 9rem; font-size: 1rem; }
+  .stempel .etikett { font-size: var(--t-klein); }
+  .stempel-name { font-size: var(--t-zwischen); }
 }
 @media (max-width: 40rem) {
   .einleitung { grid-template-columns: 1fr; gap: var(--s-3); padding-top: var(--s-5); padding-bottom: var(--s-5); }
