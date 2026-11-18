@@ -31,6 +31,10 @@ const ZIELE = {
   "von-ka-zu-ki": { url: "https://tschortsch3711.github.io/von-ka-zu-ki/" },
   fleischbibel: { url: "https://fleischbibel.de/" },
   "shisha-as-a-service": { url: "https://tschortsch3711.github.io/shisha-as-a-service/" },
+  "this-is-tschortsch": {
+    url: "https://open.spotify.com/artist/4StU5O0sjXiyuYFDU4IFiL",
+    verstecke: '#onetrust-consent-sdk, aside[data-testid="now-playing-bar"]',
+  },
 };
 
 const warte = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -120,6 +124,11 @@ async function screenshots(cdp, slug, z) {
   await cdp.senden("Emulation.setDeviceMetricsOverride", { width: 1280, height: 800, deviceScaleFactor: 1, mobile: false });
   await laden(cdp, z.url);
   await cdp.senden("Runtime.evaluate", { expression: AUFRAEUMEN });
+  if (z.verstecke) {
+    await cdp.senden("Runtime.evaluate", {
+      expression: `(() => { const st = document.createElement('style'); st.textContent = ${JSON.stringify(z.verstecke + "{display:none!important}")}; document.head.appendChild(st); })()`,
+    });
+  }
   let y = 0;
   if (z.scrollZu) {
     const { result } = await cdp.senden("Runtime.evaluate", {
