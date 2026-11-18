@@ -212,6 +212,81 @@
       ]
     },
     {
+      "id": "musik",
+      "name": "Musik",
+      "projekte": [
+        {
+          "slug": "this-is-tschortsch",
+          "name": "This is tschortsch",
+          "satz": "Eigene Songs auf Spotify, entstanden mit Suno.",
+          "aussage": "Songs als tschortsch, von der Idee bis auf Spotify.",
+          "unter": "Seit 2025 sind 39 Veröffentlichungen mit zusammen 50 Songs erschienen: 37 Singles, eine EP und ein Album.",
+          "fakten": {
+            "was": "Eigene Musik unter dem Namen tschortsch",
+            "fuerWen": "Alle, die reinhören wollen",
+            "womit": "Suno für die Musik, Amuse für den Vertrieb",
+            "stand": "Live auf Spotify und weiteren Streamingdiensten"
+          },
+          "absaetze": [
+            {
+              "titel": "Wie ein Song entsteht",
+              "text": "Am Anfang steht eine eingesprochene Idee. Daraus werden Titel, Text und eine Stilbeschreibung für Suno. Suno erzeugt die Musik, das Cover entsteht mit ChatGPT, veröffentlicht wird über Amuse."
+            },
+            {
+              "titel": "Was erschienen ist",
+              "text": "Die ersten Singles kamen 2025. 2026 folgten weitere Singles, die EP „Oliven & Tomaten“ mit vier Songs und das Album „Was In Prag Passiert Bleibt Nicht In Prag“ mit sieben Songs."
+            },
+            {
+              "titel": "Halb automatisch",
+              "text": "Die Schritte von Suno bis Amuse laufen über eine eigene Pipeline mit Claude Code, das die Weboberflächen im Browser bedient. Generiert, heruntergeladen und abgeschickt wird erst nach Freigabe."
+            }
+          ],
+          "links": [
+            { "was": "Spotify", "url": "https://open.spotify.com/artist/4StU5O0sjXiyuYFDU4IFiL" },
+            { "was": "Repo", "url": "https://github.com/tschortsch3711/this-is-tschortsch" }
+          ],
+          "bildAlt": "Spotify-Profil von tschortsch mit Künstlerbild, Name und den beliebtesten Songs"
+        },
+        {
+          "slug": "release-pipeline",
+          "name": "Release-Pipeline",
+          "satz": "Wie aus einer Songidee ein Release auf Spotify wird, mit Claude Code.",
+          "aussage": "Claude Code bringt die Songs auf Spotify, aber nur nach Freigabe.",
+          "unter": "Ein Claude-Code-Projekt mit neun Skills und 21 Skripten. Es bedient Suno, ChatGPT, Amuse und Musixmatch im Browser. Generiert, heruntergeladen und abgeschickt wird nur nach ausdrücklicher Freigabe.",
+          "fakten": {
+            "was": "Release-Pipeline für die Songs von tschortsch",
+            "fuerWen": "Für den eigenen Gebrauch, oft per Sprache vom iPhone aus",
+            "womit": "Claude Code, Claude in Chrome, Python und JavaScript",
+            "stand": "In Gebrauch seit September 2026, Repo privat"
+          },
+          "absaetze": [
+            {
+              "titel": "Jeder Schritt ein Skill",
+              "text": "Neuer Song, Generieren, Import, Download, Cover, Cover bereinigen, Analyse, Release und Lyrics nachreichen sind eigene Skills. Zu jedem Song gibt es eine song.json, die den Stand vom Entwurf bis zur Veröffentlichung festhält."
+            },
+            {
+              "titel": "Freigabe statt Autopilot",
+              "text": "Bei Suno wird erst nach einem ausdrücklichen „Los“ generiert und nur auf Anweisung heruntergeladen. Bei Amuse geht nichts raus, bevor eine vollständige Zusammenfassung gezeigt wurde und ein „Go“ kam. Captchas löst der Mensch selbst."
+            },
+            {
+              "titel": "Skript vor Klick",
+              "text": "Im Browser arbeitet Claude möglichst per Skript über Beschriftungen und Formularfelder statt über Klicks auf Koordinaten. Jeder neu gefundene Weg wandert als Helfer in die Skripte und in den passenden Skill."
+            },
+            {
+              "titel": "Nach dem Release",
+              "text": "Spotify zeigt Lyrics nur über Musixmatch. Die Pipeline holt den gesungenen Text aus Suno, prüft ihn und reicht ihn ein, zeitsynchron anhand der Zeitstempel aus Suno."
+            }
+          ],
+          "links": [
+            { "was": "Die Musik dazu", "url": "https://tschortsch3711.github.io/portfolio/projekte/this-is-tschortsch/" },
+            { "was": "Spotify", "url": "https://open.spotify.com/artist/4StU5O0sjXiyuYFDU4IFiL" }
+          ],
+          "bildUnter": "Ablauf der Pipeline, eigene Grafik",
+          "bildAlt": "Ablauf der Pipeline in acht Feldern: Idee, Entwurf, Suno, Download, Cover, Release, Lyrics und Spotify. Suno und Download tragen das Etikett Freigabe, Cover das Etikett Auf Anfrage, Release das Etikett Go."
+        }
+      ]
+    },
+    {
       "id": "betriebsrat",
       "name": "Betriebsrat",
       "projekte": [
@@ -310,81 +385,6 @@
             { "was": "Repo", "url": "https://github.com/tschortsch3711/BRorNot2BR" }
           ],
           "bildAlt": "Startseite von BR or not 2 BR? mit der Frage „Bereit für den Wahl-Check?“ und dem Start-Knopf"
-        }
-      ]
-    },
-    {
-      "id": "musik",
-      "name": "Musik",
-      "projekte": [
-        {
-          "slug": "this-is-tschortsch",
-          "name": "This is tschortsch",
-          "satz": "Eigene Songs auf Spotify, entstanden mit Suno.",
-          "aussage": "Songs als tschortsch, von der Idee bis auf Spotify.",
-          "unter": "Seit 2025 sind 39 Veröffentlichungen mit zusammen 50 Songs erschienen: 37 Singles, eine EP und ein Album.",
-          "fakten": {
-            "was": "Eigene Musik unter dem Namen tschortsch",
-            "fuerWen": "Alle, die reinhören wollen",
-            "womit": "Suno für die Musik, Amuse für den Vertrieb",
-            "stand": "Live auf Spotify und weiteren Streamingdiensten"
-          },
-          "absaetze": [
-            {
-              "titel": "Wie ein Song entsteht",
-              "text": "Am Anfang steht eine eingesprochene Idee. Daraus werden Titel, Text und eine Stilbeschreibung für Suno. Suno erzeugt die Musik, das Cover entsteht mit ChatGPT, veröffentlicht wird über Amuse."
-            },
-            {
-              "titel": "Was erschienen ist",
-              "text": "Die ersten Singles kamen 2025. 2026 folgten weitere Singles, die EP „Oliven & Tomaten“ mit vier Songs und das Album „Was In Prag Passiert Bleibt Nicht In Prag“ mit sieben Songs."
-            },
-            {
-              "titel": "Halb automatisch",
-              "text": "Die Schritte von Suno bis Amuse laufen über eine eigene Pipeline mit Claude Code, das die Weboberflächen im Browser bedient. Generiert, heruntergeladen und abgeschickt wird erst nach Freigabe."
-            }
-          ],
-          "links": [
-            { "was": "Spotify", "url": "https://open.spotify.com/artist/4StU5O0sjXiyuYFDU4IFiL" },
-            { "was": "Repo", "url": "https://github.com/tschortsch3711/this-is-tschortsch" }
-          ],
-          "bildAlt": "Spotify-Profil von tschortsch mit Künstlerbild, Name und den beliebtesten Songs"
-        },
-        {
-          "slug": "release-pipeline",
-          "name": "Release-Pipeline",
-          "satz": "Wie aus einer Songidee ein Release auf Spotify wird, mit Claude Code.",
-          "aussage": "Claude Code bringt die Songs auf Spotify, aber nur nach Freigabe.",
-          "unter": "Ein Claude-Code-Projekt mit neun Skills und 21 Skripten. Es bedient Suno, ChatGPT, Amuse und Musixmatch im Browser. Generiert, heruntergeladen und abgeschickt wird nur nach ausdrücklicher Freigabe.",
-          "fakten": {
-            "was": "Release-Pipeline für die Songs von tschortsch",
-            "fuerWen": "Für den eigenen Gebrauch, oft per Sprache vom iPhone aus",
-            "womit": "Claude Code, Claude in Chrome, Python und JavaScript",
-            "stand": "In Gebrauch seit September 2026, Repo privat"
-          },
-          "absaetze": [
-            {
-              "titel": "Jeder Schritt ein Skill",
-              "text": "Neuer Song, Generieren, Import, Download, Cover, Cover bereinigen, Analyse, Release und Lyrics nachreichen sind eigene Skills. Zu jedem Song gibt es eine song.json, die den Stand vom Entwurf bis zur Veröffentlichung festhält."
-            },
-            {
-              "titel": "Freigabe statt Autopilot",
-              "text": "Bei Suno wird erst nach einem ausdrücklichen „Los“ generiert und nur auf Anweisung heruntergeladen. Bei Amuse geht nichts raus, bevor eine vollständige Zusammenfassung gezeigt wurde und ein „Go“ kam. Captchas löst der Mensch selbst."
-            },
-            {
-              "titel": "Skript vor Klick",
-              "text": "Im Browser arbeitet Claude möglichst per Skript über Beschriftungen und Formularfelder statt über Klicks auf Koordinaten. Jeder neu gefundene Weg wandert als Helfer in die Skripte und in den passenden Skill."
-            },
-            {
-              "titel": "Nach dem Release",
-              "text": "Spotify zeigt Lyrics nur über Musixmatch. Die Pipeline holt den gesungenen Text aus Suno, prüft ihn und reicht ihn ein, zeitsynchron anhand der Zeitstempel aus Suno."
-            }
-          ],
-          "links": [
-            { "was": "Die Musik dazu", "url": "https://tschortsch3711.github.io/portfolio/projekte/this-is-tschortsch/" },
-            { "was": "Spotify", "url": "https://open.spotify.com/artist/4StU5O0sjXiyuYFDU4IFiL" }
-          ],
-          "bildUnter": "Ablauf der Pipeline, eigene Grafik",
-          "bildAlt": "Ablauf der Pipeline in acht Feldern: Idee, Entwurf, Suno, Download, Cover, Release, Lyrics und Spotify. Suno und Download tragen das Etikett Freigabe, Cover das Etikett Auf Anfrage, Release das Etikett Go."
         }
       ]
     }
