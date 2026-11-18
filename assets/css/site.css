@@ -138,12 +138,13 @@ ul, ol { padding: 0; list-style: none; }
 
 @media (max-width: 64rem) {
   .start { display: block; }
+  .einleitung { grid-template-columns: 1fr; gap: var(--s-3); }
+  .einleitung p { max-width: var(--lesebreite); }
   .raster { grid-template-columns: repeat(2, 1fr); grid-auto-rows: auto; max-height: none; }
   .kachel { height: auto; min-height: 0; aspect-ratio: 16 / 10; }
   .stempel { height: 9rem; }
 }
 @media (max-width: 40rem) {
-  .einleitung { grid-template-columns: 1fr; gap: var(--s-3); }
   .raster { grid-template-columns: 1fr; }
   .stempel-platz { padding: var(--s-4) 0; }
 }
