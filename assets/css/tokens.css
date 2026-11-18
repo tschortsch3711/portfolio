@@ -1,0 +1,69 @@
+/* Design-Tokens. Alles, was die Seite an Farbe, Schrift, Abstand und Linie kennt.
+   Beschreibung in DESIGN.md. */
+
+@font-face {
+  font-family: "Sen";
+  src: url("../../fonts/Sen/Sen-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sen";
+  src: url("../../fonts/Sen/Sen-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Farben */
+  --c-tinte: #000000;
+  --c-papier: #ffffff;
+  --c-leise: #595959;     /* 7,0:1 auf Weiß */
+  --c-haar: #e3e3e3;      /* Trennlinien zwischen Zeilen */
+  --c-flaeche: #f4f4f4;   /* Bildgrund, Fakten-Band */
+
+  /* Schrift */
+  --f-text: "Sen", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --f-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Typo-Skala */
+  --t-klein: 0.8125rem;   /* Etiketten, Fußzeile */
+  --t-text: 1rem;         /* Fließtext */
+  --t-gross: 1.1875rem;   /* Einleitung, Projektname */
+  --t-zwischen: 1.5rem;   /* Zwischentitel */
+  --t-titel: clamp(2rem, 6vw, 3rem);         /* Startseite */
+  --t-aussage: clamp(2.125rem, 7vw, 4.25rem); /* Aussage auf der Projektseite */
+
+  --z-eng: 1.08;
+  --z-text: 1.55;
+  --sp-eng: -0.035em;     /* Laufweite großer Titel */
+  --sp-etikett: 0.08em;
+
+  /* Abstände, 4px-Raster */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4.5rem;
+  --s-9: 6.5rem;
+
+  /* Radien und Linien */
+  --r-0: 0;
+  --r-1: 2px;
+  --l-duenn: 1px;
+  --l-fett: 2px;
+
+  /* Raster */
+  --breite: 60rem;
+  --rand: 2rem;
+  --lesebreite: 38rem;
+}
+
+@media (max-width: 40rem) {
+  :root { --rand: 1rem; }
+}

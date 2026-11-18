@@ -1,0 +1,226 @@
+/* Komponenten: Kopfzeile, Projektzeile, Projekt-Hero, Fakten-Band, Weiter, Fußzeile.
+   Nutzt nur Werte aus tokens.css. */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--c-papier);
+  color: var(--c-tinte);
+  font-family: var(--f-text);
+  font-size: var(--t-text);
+  line-height: var(--z-text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: var(--l-duenn); }
+a:hover { text-decoration-thickness: var(--l-fett); }
+:focus-visible { outline: var(--l-fett) solid var(--c-tinte); outline-offset: 3px; }
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+
+.springen {
+  position: absolute; left: -999rem; top: 0;
+}
+.springen:focus {
+  left: var(--s-4); top: var(--s-4); z-index: 9;
+  background: var(--c-papier); padding: var(--s-2) var(--s-4);
+  border: var(--l-duenn) solid var(--c-tinte);
+}
+
+.rahmen {
+  width: 100%;
+  max-width: calc(var(--breite) + 2 * var(--rand));
+  margin: 0 auto;
+  padding: 0 var(--rand);
+}
+
+.etikett {
+  font-family: var(--f-mono);
+  font-size: var(--t-klein);
+  font-weight: 400;
+  letter-spacing: var(--sp-etikett);
+  text-transform: uppercase;
+  color: var(--c-leise);
+}
+
+/* Kopfzeile -------------------------------------------------------------- */
+.kopf { border-bottom: var(--l-fett) solid var(--c-tinte); }
+.kopf .rahmen {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--s-4); min-height: 4rem;
+}
+.wortmarke {
+  display: inline-flex; align-items: center; gap: var(--s-3);
+  font-weight: 700; font-size: var(--t-gross); letter-spacing: -0.03em;
+  text-decoration: none; line-height: 1;
+}
+.wortmarke-zeichen {
+  display: grid; place-items: center;
+  width: 2rem; height: 2rem;
+  background: var(--c-tinte); color: var(--c-papier);
+  font-size: var(--t-klein); letter-spacing: 0;
+  border-radius: var(--r-1);
+}
+.wortmarke:hover .wortmarke-name { text-decoration: underline; text-decoration-thickness: var(--l-fett); }
+.kopf-link { font-size: var(--t-klein); font-weight: 700; }
+
+/* Startseite ------------------------------------------------------------- */
+.einleitung { padding: var(--s-8) 0 var(--s-7); }
+.einleitung h1 {
+  font-size: var(--t-titel); line-height: var(--z-eng); letter-spacing: var(--sp-eng);
+  max-width: 18ch;
+}
+.einleitung p {
+  margin-top: var(--s-5); max-width: var(--lesebreite);
+  font-size: var(--t-gross); color: var(--c-leise);
+}
+
+.gruppe { padding-bottom: var(--s-7); }
+.gruppe-kopf {
+  display: flex; justify-content: space-between; align-items: baseline; gap: var(--s-4);
+  border-top: var(--l-fett) solid var(--c-tinte);
+  padding-top: var(--s-3);
+}
+
+/* Projektzeile ----------------------------------------------------------- */
+.zeile {
+  display: grid;
+  grid-template-columns: 3rem minmax(10rem, 16rem) 1fr 2rem;
+  gap: var(--s-1) var(--s-5);
+  align-items: baseline;
+  padding: var(--s-5) 0;
+  border-bottom: var(--l-duenn) solid var(--c-haar);
+  text-decoration: none;
+  transition: background-color .12s ease, color .12s ease, padding .12s ease;
+}
+.zeile-nr { font-family: var(--f-mono); font-size: var(--t-klein); color: var(--c-leise); }
+.zeile-name { font-size: var(--t-zwischen); font-weight: 700; letter-spacing: -0.025em; line-height: 1.15; }
+.zeile-satz { color: var(--c-leise); }
+.zeile-pfeil { justify-self: end; font-size: var(--t-zwischen); line-height: 1; transition: transform .12s ease; }
+.zeile:hover, .zeile:focus-visible {
+  background: var(--c-tinte); color: var(--c-papier);
+  padding-left: var(--s-3); padding-right: var(--s-3);
+  outline-offset: 0;
+}
+.zeile:hover .zeile-nr, .zeile:hover .zeile-satz,
+.zeile:focus-visible .zeile-nr, .zeile:focus-visible .zeile-satz { color: var(--c-papier); }
+.zeile:hover .zeile-pfeil { transform: translateX(var(--s-1)); }
+
+@media (max-width: 46rem) {
+  .zeile {
+    grid-template-columns: 2.25rem 1fr 1.5rem;
+    padding: var(--s-4) 0;
+  }
+  .zeile-nr { grid-column: 1; grid-row: 1; }
+  .zeile-name { grid-column: 2; grid-row: 1; font-size: var(--t-gross); }
+  .zeile-pfeil { grid-column: 3; grid-row: 1; font-size: var(--t-gross); }
+  .zeile-satz { grid-column: 2 / 4; grid-row: 2; }
+}
+
+/* Projekt-Hero ----------------------------------------------------------- */
+.held { padding: var(--s-7) 0 var(--s-6); }
+.held .etikett { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-4); }
+.held h1 {
+  margin-top: var(--s-4);
+  font-size: var(--t-aussage); line-height: var(--z-eng); letter-spacing: var(--sp-eng);
+  max-width: 16ch;
+}
+.held-unter {
+  margin-top: var(--s-5); max-width: var(--lesebreite);
+  font-size: var(--t-gross); color: var(--c-leise);
+}
+.bild {
+  margin-top: var(--s-7);
+  border: var(--l-duenn) solid var(--c-tinte);
+  border-radius: var(--r-1);
+  background: var(--c-flaeche);
+  overflow: hidden;
+}
+.bild img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+.bild-unter {
+  margin-top: var(--s-2);
+}
+
+/* Fakten-Band ------------------------------------------------------------ */
+.band {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: var(--s-7) 0 0;
+  border-top: var(--l-fett) solid var(--c-tinte);
+  border-bottom: var(--l-fett) solid var(--c-tinte);
+}
+.band > div {
+  padding: var(--s-4) var(--s-4) var(--s-5);
+  border-left: var(--l-duenn) solid var(--c-haar);
+}
+.band > div:first-child { border-left: 0; padding-left: 0; }
+.band dt { margin-bottom: var(--s-2); }
+.band dd { font-weight: 700; line-height: 1.35; }
+
+@media (max-width: 46rem) {
+  .band { grid-template-columns: 1fr 1fr; }
+  .band > div { padding-left: var(--s-4); }
+  .band > div:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .band > div:nth-child(n+3) { border-top: var(--l-duenn) solid var(--c-haar); }
+}
+
+/* Absätze ---------------------------------------------------------------- */
+.text {
+  display: grid;
+  grid-template-columns: minmax(10rem, 16rem) 1fr;
+  gap: var(--s-6) var(--s-5);
+  padding: var(--s-8) 0 var(--s-7);
+}
+.text-block { display: contents; }
+.text h2 { font-size: var(--t-gross); letter-spacing: -0.02em; line-height: 1.3; }
+.text p { max-width: var(--lesebreite); }
+.text p + p { margin-top: var(--s-3); }
+
+@media (max-width: 46rem) {
+  .text { grid-template-columns: 1fr; gap: var(--s-2); padding: var(--s-7) 0 var(--s-6); }
+  .text-block > div { margin-bottom: var(--s-5); }
+}
+
+/* Weiter ----------------------------------------------------------------- */
+.weiter { padding-bottom: var(--s-8); }
+.weiter-liste { border-top: var(--l-fett) solid var(--c-tinte); }
+.weiter-link {
+  display: grid;
+  grid-template-columns: minmax(10rem, 16rem) 1fr 2rem;
+  gap: var(--s-1) var(--s-5);
+  align-items: baseline;
+  padding: var(--s-5) 0;
+  border-bottom: var(--l-duenn) solid var(--c-haar);
+  text-decoration: none;
+  transition: background-color .12s ease, color .12s ease, padding .12s ease;
+}
+.weiter-was { font-size: var(--t-zwischen); font-weight: 700; letter-spacing: -0.025em; line-height: 1.15; }
+.weiter-wo { color: var(--c-leise); overflow-wrap: anywhere; }
+.weiter-link .zeile-pfeil { grid-column: 3; }
+.weiter-link:hover, .weiter-link:focus-visible {
+  background: var(--c-tinte); color: var(--c-papier);
+  padding-left: var(--s-3); padding-right: var(--s-3); outline-offset: 0;
+}
+.weiter-link:hover .weiter-wo, .weiter-link:focus-visible .weiter-wo { color: var(--c-papier); }
+
+@media (max-width: 46rem) {
+  .weiter-link { grid-template-columns: 1fr 1.5rem; padding: var(--s-4) 0; }
+  .weiter-was { font-size: var(--t-gross); grid-column: 1; grid-row: 1; }
+  .weiter-link .zeile-pfeil { grid-column: 2; grid-row: 1; font-size: var(--t-gross); }
+  .weiter-wo { grid-column: 1 / 3; grid-row: 2; }
+}
+
+/* Fußzeile --------------------------------------------------------------- */
+.fuss { border-top: var(--l-fett) solid var(--c-tinte); }
+.fuss .rahmen {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-2) var(--s-5);
+  padding-top: var(--s-5); padding-bottom: var(--s-7);
+  font-size: var(--t-klein); color: var(--c-leise);
+}
+.fuss a { color: var(--c-tinte); font-weight: 700; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
