@@ -1,4 +1,4 @@
-/* Komponenten: Kopfzeile, Projektzeile, Projekt-Hero, Fakten-Band, Weiter, Fußzeile.
+/* Komponenten: Kopfzeile, Projektzeile, Projekt-Hero, Fakten-Band, Weiter.
    Nutzt nur Werte aus tokens.css. */
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -67,7 +67,7 @@ ul, ol { padding: 0; list-style: none; }
 .kopf-link { font-size: var(--t-klein); font-weight: 700; }
 
 /* Startseite: Kontaktabzug, auf dem Desktop alles auf einen Blick -------- */
-.start { min-height: 100svh; display: grid; grid-template-rows: auto auto 1fr auto; }
+.start { min-height: 100svh; display: grid; grid-template-rows: auto auto 1fr; }
 /* Die Startseite nutzt die ganze Fensterbreite */
 .start .rahmen, .einleitung, .raster { max-width: none; }
 .einleitung {
@@ -80,11 +80,13 @@ ul, ol { padding: 0; list-style: none; }
   font-size: clamp(2rem, 4.2vw, 3.5rem); line-height: 1.02; letter-spacing: var(--sp-eng);
   text-wrap: balance;
 }
-.einleitung p { font-size: var(--t-gross); color: var(--c-leise); text-wrap: balance; }
+.einleitung p { font-size: var(--t-gross); color: var(--c-leise); }
+/* Jeder Satz der Einleitung beginnt in einer eigenen Zeile und bricht gleichmäßig um */
+.einleitung p span { display: block; text-wrap: balance; }
 
 .start main { display: grid; min-height: 0; }
 .raster {
-  width: 100%; margin: 0 auto; padding: var(--s-4) var(--rand);
+  width: 100%; margin: 0 auto; padding: var(--s-4) var(--rand) var(--rand);
   display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr;
   gap: var(--s-3) var(--s-4); min-height: 0;
   /* Kacheln nie höher als das Bildformat 16:10, sonst würden die Screenshots seitlich beschnitten */
@@ -138,8 +140,14 @@ ul, ol { padding: 0; list-style: none; }
 .stempel .etikett { color: var(--c-haar); font-size: clamp(var(--t-klein), 6cqh, 1.25rem); }
 .stempel-name { font-size: clamp(var(--t-zwischen), 13cqh, 3rem); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; }
 .stempel:hover, .stempel:focus-visible { transform: rotate(-6deg) scale(1.04); }
-.start .fuss .rahmen { padding-top: var(--s-3); padding-bottom: var(--s-3); }
 
+/* Sehr breite Fenster: Titel und jeder Satz stehen in einer Zeile. Der Text sitzt mittig
+   zwischen dem Ende des Titels und dem rechten Rand, die Abstände links und rechts sind gleich. */
+@media (min-width: 148rem) {
+  .einleitung { grid-template-columns: auto 1fr; gap: 0; }
+  .einleitung h1, .einleitung p span { white-space: nowrap; }
+  .einleitung p { justify-self: center; }
+}
 @media (max-width: 64rem) {
   .start { display: block; }
   /* Tablet: Titel etwas größer, damit beide Spalten etwa gleich hoch sind */
@@ -154,7 +162,7 @@ ul, ol { padding: 0; list-style: none; }
 }
 @media (max-width: 40rem) {
   .einleitung { grid-template-columns: 1fr; gap: var(--s-3); padding-top: var(--s-5); padding-bottom: var(--s-5); }
-  .einleitung h1 { font-size: 2rem; }
+  .einleitung h1 { font-size: clamp(2rem, 8.4vw, 2.5rem); }
   .einleitung p { font-size: var(--t-gross); }
   .raster { grid-template-columns: 1fr; }
   .stempel-platz { padding: var(--s-4) 0; }
@@ -293,15 +301,6 @@ ul, ol { padding: 0; list-style: none; }
   .weiter-link .zeile-pfeil { grid-column: 2; grid-row: 1; font-size: var(--t-gross); }
   .weiter-wo { grid-column: 1 / 3; grid-row: 2; }
 }
-
-/* Fußzeile --------------------------------------------------------------- */
-.fuss { border-top: var(--l-fett) solid var(--c-tinte); }
-.fuss .rahmen {
-  display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-2) var(--s-5);
-  padding-top: var(--s-5); padding-bottom: var(--s-7);
-  font-size: var(--t-klein); color: var(--c-leise);
-}
-.fuss a { color: var(--c-tinte); font-weight: 700; }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }

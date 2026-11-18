@@ -64,15 +64,6 @@ function kopf(wurzelPfad) {
 </header>`;
 }
 
-function fuss() {
-  return `<footer class="fuss">
-  <div class="rahmen">
-    <span>${esc(seite.einleitungTitel)}</span>
-    <a href="${esc(seite.github)}">${esc(ohneProtokoll(seite.github))}</a>
-  </div>
-</footer>`;
-}
-
 const seitenRahmen = (kopfdatenHtml, koerper) => `<!DOCTYPE html>
 <html lang="de">
 <head>
@@ -131,7 +122,7 @@ function startseite() {
 ${kopf("./")}
 <section class="einleitung">
   <h1>${esc(seite.einleitungTitel)}</h1>
-  <p>${esc(seite.einleitung)}</p>
+  <p>${[].concat(seite.einleitung).map((satz) => `<span>${esc(satz)}</span>`).join(" ")}</p>
 </section>
 <main id="inhalt">
 <ul class="raster">
@@ -145,7 +136,6 @@ ${alle.map(kachel).join("\n")}
   </li>
 </ul>
 </main>
-${fuss()}
 </div>
 ${fokusSkript}`;
 
@@ -239,8 +229,7 @@ ${links}
       </ul>
     </nav>
   </div>
-</main>
-${fuss()}`;
+</main>`;
 
   return seitenRahmen(
     kopfdaten({

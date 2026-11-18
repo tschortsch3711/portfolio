@@ -5,7 +5,10 @@
     "titel": "Nikola Djordjevic · Projekte",
     "beschreibung": "Öffentliche Projekte von Nikola Djordjevic aus Freising: 3D-Druck, Lagerhallen, Backblog, ein KI-Glossar und andere Open-Source-Seiten, drei Werkzeuge rund um den Betriebsrat und Musik.",
     "einleitungTitel": "Ideen, die nicht in der Schublade bleiben.",
-    "einleitung": "Mit agentischer KI als Werkzeug bringe ich Visionen und Konzepte über funktionale Prototypen bis in den laufenden Betrieb. Hier siehst du, was bisher daraus entstanden ist.",
+    "einleitung": [
+      "Mit agentischer KI als Werkzeug bringe ich Visionen und Konzepte über funktionale Prototypen bis in den laufenden Betrieb.",
+      "Hier siehst du, was bisher daraus entstanden ist."
+    ],
     "github": "https://github.com/tschortsch3711",
     "bilderStand": "18.11.2026"
   },

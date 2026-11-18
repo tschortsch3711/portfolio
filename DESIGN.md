@@ -33,7 +33,7 @@ Alle Werte stehen als CSS-Variablen in [`assets/css/tokens.css`](assets/css/toke
 
 **Weiter** `.weiter`: Zeilen im Stil der Projektzeile mit Live-Seite, Repo (nur wenn öffentlich) und dem nächsten Projekt.
 
-**Fußzeile** `.fuss`: Links der Leitsatz, rechts der Link zu GitHub.
+Eine Fußzeile gibt es nicht. Der Link zu GitHub steht in der Kopfzeile und im Stempel.
 
 ## Regeln
 
