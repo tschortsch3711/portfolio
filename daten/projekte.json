@@ -3,7 +3,7 @@
     "url": "https://tschortsch3711.github.io/portfolio/",
     "name": "Nikola Djordjevic",
     "titel": "Nikola Djordjevic · Projekte",
-    "beschreibung": "Öffentliche Projekte von Nikola Djordjevic aus Freising: 3D-Druck, Lagerhallen, Backblog, ein KI-Glossar, ein paar kleine Seiten und Musik.",
+    "beschreibung": "Öffentliche Projekte von Nikola Djordjevic aus Freising: 3D-Druck, Lagerhallen, Backblog, ein KI-Glossar und andere Open-Source-Seiten, dazu Musik.",
     "einleitungTitel": "Webseiten, Wissen und Dinge aus dem Drucker.",
     "einleitung": "Ich bin Nikola, Designer und Maker aus Freising bei München. Hier sind meine öffentlichen Webprojekte, jedes mit einer eigenen Seite.",
     "github": "https://github.com/tschortsch3711",
@@ -110,8 +110,8 @@
       ]
     },
     {
-      "id": "wissen",
-      "name": "Wissen",
+      "id": "open-source",
+      "name": "Open Source",
       "projekte": [
         {
           "slug": "von-ka-zu-ki",
@@ -176,13 +176,7 @@
             { "was": "Repo", "url": "https://github.com/tschortsch3711/fleischbibel" }
           ],
           "bildAlt": "Startseite der Fleischbibel mit dem Titel „Die Fleischbibel“ und Kacheln für Gemeinschaft, Regeln und Organisation"
-        }
-      ]
-    },
-    {
-      "id": "klein",
-      "name": "Kleine Seiten",
-      "projekte": [
+        },
         {
           "slug": "shisha-as-a-service",
           "name": "Shisha as a Service",
