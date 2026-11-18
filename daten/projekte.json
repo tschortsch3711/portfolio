@@ -3,7 +3,7 @@
     "url": "https://tschortsch3711.github.io/portfolio/",
     "name": "Nikola Djordjevic",
     "titel": "Nikola Djordjevic · Projekte",
-    "beschreibung": "Öffentliche Projekte von Nikola Djordjevic aus Freising: 3D-Druck, Lagerhallen, Backblog, ein KI-Glossar und andere Open-Source-Seiten, drei Werkzeuge rund um den Betriebsrat und Musik.",
+    "beschreibung": "Ideen, die nicht in der Schublade bleiben. Projekte von Nikola Djordjevic: Seiten für Betriebe, Open Source, Musik und Werkzeuge fürs Ehrenamt.",
     "einleitungTitel": "Ideen, die nicht in der Schublade bleiben.",
     "einleitung": [
       "Mit agentischer KI als Werkzeug bringe ich Visionen und Konzepte über funktionale Prototypen bis in den laufenden Betrieb.",
@@ -43,7 +43,7 @@
             },
             {
               "titel": "Welches Material",
-              "text": "Die Seite erklärt PLA für drinnen, PETG für Belastung, ASA für draußen und TPU für biegsame Teile, jeweils mit ihren Grenzen."
+              "text": "PLA für drinnen, PETG für Belastung, ASA für draußen, TPU für Biegsames.\nDie Seite sagt zu jedem Material auch, wo es an seine Grenzen kommt."
             },
             {
               "titel": "In Zahlen",
@@ -78,7 +78,7 @@
             },
             {
               "titel": "Vier Schritte",
-              "text": "Anfragen, besichtigen, Vertrag, einlagern. Kontakt per Telefon, WhatsApp oder E-Mail. Die Karte ist nicht eingebettet, ein Link öffnet Google Maps."
+              "text": "Anfragen, besichtigen, Vertrag, einlagern. Kontakt per Telefon, WhatsApp oder E-Mail."
             }
           ],
           "links": [
@@ -143,11 +143,11 @@
             },
             {
               "titel": "Wo man einsteigt",
-              "text": "Man kann das Glossar per Volltextsuche durchsuchen, die Perspektive wechseln oder einem Lernpfad für Management, IT oder Einsteiger folgen. Dazu gibt es kleine Wissenstests."
+              "text": "Über die Volltextsuche, über die eigene Perspektive oder über einen Lernpfad für Management, IT oder Einsteiger. Kleine Wissenstests zeigen, was hängen geblieben ist."
             },
             {
               "titel": "Ohne Server",
-              "text": "Die Seite ist komplett statisch. Die Suche läuft im Browser über eine JSON-Datei, es gibt keine Server-Komponente und keine externen KI-Dienste."
+              "text": "Die Seite ist komplett statisch. Die Suche läuft im Browser, ohne Server und ohne externe KI-Dienste."
             }
           ],
           "links": [
@@ -179,7 +179,7 @@
             },
             {
               "titel": "Wie sie gepflegt wird",
-              "text": "Alle Seiten sind Markdown-Dateien. Nach einem Push auf main baut GitHub Actions die Seite und veröffentlicht sie."
+              "text": "Alle Seiten sind einfache Markdown-Dateien. Jede Änderung geht automatisch online."
             }
           ],
           "links": [
@@ -203,11 +203,11 @@
           "absaetze": [
             {
               "titel": "Die Strecke",
-              "text": "Oben liegt die Strecke Freising bis Regensburg. Jede Bar sitzt dort, wo sich die Fahrzeit für beide aufteilt. Je näher an der Mitte, desto fairer."
+              "text": "Jede Bar sitzt auf der Strecke dort, wo sich die Fahrzeit für beide aufteilt. Je näher an der Mitte, desto fairer ist die Fahrt verteilt."
             },
             {
               "titel": "Die Auswahl",
-              "text": "Towers in Landshut, Dejavu in der Landshuter Altstadt, Illyrian in Abensberg-Aumühle und MOG‘ 68 in Moosburg an der Isar. Darunter Karten mit Öffnungszeiten und Stimmen aus den Bewertungen."
+              "text": "Je nach Startort vier von sechs Bars zwischen Abensberg, Landshut, Moosburg, Erding und Neufahrn. Jede Karte zeigt Sterne, Fahrzeiten und Stimmen aus den Bewertungen, auch die kritischen."
             },
             {
               "titel": "Wie es entstand",
@@ -218,7 +218,7 @@
             { "was": "Live-Seite", "url": "https://tschortsch3711.github.io/shisha-as-a-service/" },
             { "was": "Repo", "url": "https://github.com/tschortsch3711/shisha-as-a-service" }
           ],
-          "bildAlt": "Startseite von Shisha as a Service mit der Strecke zwischen Freising und Regensburg und vier nummerierten Bars"
+          "bildAlt": "Einstieg von Shisha as a Service mit der Überschrift „Ein Ort, den noch keiner von uns kennt.“, vier Fotos von Bars und einem runden Siegel"
         }
       ]
     },
@@ -267,22 +267,18 @@
           "unter": "Ein Claude-Code-Projekt mit neun Skills und 21 Skripten. Es bedient Suno, ChatGPT, Amuse und Musixmatch im Browser. Generiert, heruntergeladen und abgeschickt wird nur nach ausdrücklicher Freigabe.",
           "fakten": {
             "was": "Release-Pipeline für die Songs von tschortsch",
-            "fuerWen": "Für den eigenen Gebrauch, oft per Sprache vom iPhone aus",
+            "fuerWen": "Für den eigenen Gebrauch",
             "womit": "Claude Code, Claude in Chrome, Python und JavaScript",
             "stand": "In Gebrauch seit September 2026, Repo privat"
           },
           "absaetze": [
             {
               "titel": "Jeder Schritt ein Skill",
-              "text": "Neuer Song, Generieren, Import, Download, Cover, Cover bereinigen, Analyse, Release und Lyrics nachreichen sind eigene Skills. Zu jedem Song gibt es eine song.json, die den Stand vom Entwurf bis zur Veröffentlichung festhält."
+              "text": "Neuer Song, Generieren, Import, Download, Cover, Cover bereinigen, Analyse, Release und Lyrics nachreichen. Eine Statusdatei pro Song hält fest, wie weit er vom Entwurf bis zur Veröffentlichung ist."
             },
             {
               "titel": "Freigabe statt Autopilot",
-              "text": "Bei Suno wird erst nach einem ausdrücklichen „Los“ generiert und nur auf Anweisung heruntergeladen. Bei Amuse geht nichts raus, bevor eine vollständige Zusammenfassung gezeigt wurde und ein „Go“ kam. Captchas löst der Mensch selbst."
-            },
-            {
-              "titel": "Skript vor Klick",
-              "text": "Im Browser arbeitet Claude möglichst per Skript über Beschriftungen und Formularfelder statt über Klicks auf Koordinaten. Jeder neu gefundene Weg wandert als Helfer in die Skripte und in den passenden Skill."
+              "text": "Generiert, heruntergeladen und veröffentlicht wird erst nach ausdrücklicher Freigabe. Vor jedem Release steht eine vollständige Zusammenfassung zum Gegenlesen."
             },
             {
               "titel": "Nach dem Release",
@@ -324,8 +320,8 @@
               "text": "Jede Entscheidung verschiebt Werte wie das Vertrauen von Belegschaft und Arbeitgeber, den Zusammenhalt im Gremium, das Rechtsrisiko, Stress und Arbeitslast. Versäumte Fristen haben Folgen, hoher Stress schränkt die Optionen ein."
             },
             {
-              "titel": "Erweiterbar",
-              "text": "Die Geschichten liegen als JSON-Dateien vor: 10 Ereignisse, 8 Fälle, 6 Verhandlungen, 3 Übergaben an den Gesamtbetriebsrat, 2 Einigungsstellen und 3 Wissensbausteine. Alle Figuren sind erfunden, und die Simulation ist keine Rechtsberatung."
+              "titel": "Was drinsteckt",
+              "text": "10 Ereignisse, 8 Fälle, 6 Verhandlungen, 3 Übergaben an den Gesamtbetriebsrat, 2 Einigungsstellen und 3 Wissensbausteine. Alle Figuren sind erfunden, die Simulation ist keine Rechtsberatung."
             }
           ],
           "links": [
@@ -353,10 +349,6 @@
               "text": "Der Check gibt keine Empfehlung und bewertet nicht die Persönlichkeit. Er soll zum Nachdenken anregen und eine Grundlage für Gespräche mit erfahrenen Betriebsratsmitgliedern liefern."
             },
             {
-              "titel": "So funktioniert er",
-              "text": "Jede Aussage wird auf einer Skala von „trifft zu“ bis „trifft nicht zu“ beantwortet. Daraus entstehen Werte von 0 bis 100 für Motivation, Zeit, Kommunikation, Konflikt, Rückhalt und Selbstmanagement."
-            },
-            {
               "titel": "Bleibt im Browser",
               "text": "Antworten und Fortschritt werden nur im eigenen Browser gespeichert. An einen Server geht nichts."
             }
@@ -371,7 +363,7 @@
           "slug": "br-or-not-2-br",
           "bildPosition": "center top",
           "name": "BR or not 2 BR?",
-          "satz": "Eine Entscheidungshilfe mit Augenzwinkern, ob man zur Betriebsratswahl geht.",
+          "satz": "Zur Betriebsratswahl gehen oder nicht? Zwölf Fragen, eine Minute.",
           "aussage": "Zur Betriebsratswahl gehen? Zwölf Fragen helfen beim Entscheiden.",
           "unter": "Für Unentschlossene, Genervte und Erstwähler. Nach 30 bis 60 Sekunden gibt es ein Ergebnis mit den wichtigsten Faktoren und nächsten Schritten.",
           "fakten": {
@@ -382,8 +374,8 @@
           },
           "absaetze": [
             {
-              "titel": "Locker im Ton",
-              "text": "Die Seite erinnert zum Beispiel daran, dass Wählen meist kürzer dauert als die Kaffeeschlange. Die Fragen decken trotzdem Motivation, Hürden, Vertrauen, Werte und Information ab."
+              "titel": "Kürzer als die Kaffeeschlange",
+              "text": "So lange dauert Wählen meistens, erinnert die Seite. Die zwölf Fragen gehen trotzdem in die Tiefe: Motivation, Hürden, Vertrauen, Werte und Information."
             },
             {
               "titel": "Ohne Listen und Namen",

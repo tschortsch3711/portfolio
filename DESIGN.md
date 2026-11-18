@@ -15,7 +15,7 @@ Alle Werte stehen als CSS-Variablen in [`assets/css/tokens.css`](assets/css/toke
 | Abstände | `--s-1` bis `--s-9` | 4, 8, 12, 16, 24, 32, 48, 72, 104 px |
 | Radien | `--r-0`, `--r-1` | 0 und 2 px. Fast alles ist eckig |
 | Linien | `--l-duenn`, `--l-fett` | 1 px für Trennlinien, 2 px für Abschnittsgrenzen |
-| Raster | `--breite`, `--rand`, `--lesebreite` | 960 px Inhalt, Rand 32 px (16 px unter 640 px), 38rem Lesebreite |
+| Raster | `--breite`, `--rand`, `--lesebreite` | 960 px Inhalt, Rand 32 px (16 px unter 640 px), 42rem Lesebreite |
 
 ## Komponenten
 

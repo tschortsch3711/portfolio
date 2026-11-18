@@ -175,7 +175,7 @@ function projektseite(p, i) {
     .map(
       (a) => `      <div class="text-block">
         <h2>${esc(a.titel)}</h2>
-        <div><p>${esc(a.text)}</p></div>
+        <div><p>${esc(a.text).replace(/\n/g, "<br>")}</p></div>
       </div>`
     )
     .join("\n");

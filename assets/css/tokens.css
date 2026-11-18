@@ -61,7 +61,7 @@
   /* Raster */
   --breite: 60rem;
   --rand: 2rem;
-  --lesebreite: 38rem;
+  --lesebreite: 42rem;
 }
 
 @media (max-width: 40rem) {
