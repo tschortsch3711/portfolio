@@ -16,9 +16,14 @@ const ohneBindestrichUmbruch = (s) => s.replace(/-(?=\p{L})/gu, "-⁠");
 const nr = (i) => String(i).padStart(2, "0");
 const ohneProtokoll = (url) => url.replace(/^https?:\/\//, "").replace(/\/$/, "");
 
-// Alle Projekte in Reihenfolge, mit laufender Nummer und Gruppe
-const alle = [];
-for (const g of gruppen) for (const p of g.projekte) alle.push({ ...p, gruppe: g, nr: nr(alle.length + 1) });
+// Alle Projekte in der Reihenfolge der Startseite (daten.start), mit laufender Nummer und Gruppe
+const nachSlug = {};
+for (const g of gruppen) for (const p of g.projekte) nachSlug[p.slug] = { ...p, gruppe: g };
+const { start } = daten;
+const reihenfolge = [...start.oben, ...start.unten];
+const fehlt = Object.keys(nachSlug).filter((s) => !reihenfolge.includes(s));
+if (fehlt.length) throw new Error(`In daten.start fehlen: ${fehlt.join(", ")}`);
+const alle = reihenfolge.map((s, i) => ({ ...nachSlug[s], nr: nr(i + 1) }));
 
 function kopfdaten({ titel, beschreibung, url, bild, bildAlt, wurzelPfad, typ }) {
   return `<meta charset="utf-8">
@@ -82,40 +87,34 @@ ${koerper}
 
 // Startseite ----------------------------------------------------------------
 function startseite() {
-  // Kontaktabzug: eine Spalte pro Gruppe, eine Kachel pro Projekt.
-  // Hat eine Gruppe weniger als drei Projekte, füllt eine schwarze Info-Kachel die Lücke.
-  const spalten = gruppen
-    .map((g) => {
-      const kacheln = alle
-        .filter((p) => p.gruppe.id === g.id)
-        .map(
-          (p) => `        <li>
-          <a class="kachel" href="projekte/${p.slug}/">
-            <img src="assets/bilder/${p.slug}-800.webp" width="800" height="500" alt="">
-            <span class="kachel-text">
-              <span class="kachel-nr" aria-hidden="true">${p.nr}</span>
-              <span class="kachel-name">${esc(p.name)}</span>
-              <span class="kachel-satz">${esc(p.satz)}</span>
-            </span>
-          </a>
-        </li>`
-        )
-        .join("\n");
-      const info =
-        g.projekte.length < 3
-          ? `\n        <li class="kachel kachel-info">
-          <p>${alle.length} Projekte, statisch und ohne Tracking.</p>
-          <a href="${esc(seite.github)}">Alles auf GitHub →</a>
-        </li>`
-          : "";
-      return `    <section class="spalte" aria-labelledby="g-${g.id}">
-      <h2 class="etikett spalte-kopf" id="g-${g.id}">${esc(g.name)}<span aria-hidden="true">${g.projekte.length}</span></h2>
-      <ul>
-${kacheln}${info}
-      </ul>
-    </section>`;
-    })
-    .join("\n");
+  // Kontaktabzug in vier Spalten: oben die neuesten Projekte mit ihrer Gruppe als Etikett,
+  // darunter eine eigene Zeile für eine Gruppe (daten.start.untenGruppe) und ganz unten rechts die Info-Kachel.
+  const kachel = (p, mitGruppe) => `      <li>
+        <a class="kachel" href="projekte/${p.slug}/">
+          <img src="assets/bilder/${p.slug}-800.webp" width="800" height="500" alt="">
+          <span class="kachel-text">
+            <span class="kachel-nr" aria-hidden="true">${p.nr}</span>
+            <span class="kachel-name">${esc(p.name)}</span>${mitGruppe ? `\n            <span class="kachel-gruppe etikett">${esc(p.gruppe.name)}</span>` : ""}
+            <span class="kachel-satz">${esc(p.satz)}</span>
+          </span>
+        </a>
+      </li>`;
+  const untenGruppe = gruppen.find((g) => g.id === start.untenGruppe);
+  const oben = alle.slice(0, start.oben.length);
+  const unten = alle.slice(start.oben.length);
+  const spalten = `  <ul class="raster-oben" aria-label="Neueste Projekte">
+${oben.map((p) => kachel(p, true)).join("\n")}
+  </ul>
+  <section class="raster-unten" aria-labelledby="g-${untenGruppe.id}">
+    <h2 class="etikett zeile-kopf" id="g-${untenGruppe.id}">${esc(untenGruppe.name)}<span aria-hidden="true">${unten.length}</span></h2>
+    <ul>
+${unten.map((p) => kachel(p, false)).join("\n")}
+      <li class="kachel kachel-info">
+        <p>${alle.length} Projekte, statisch und ohne Tracking.</p>
+        <a href="${esc(seite.github)}">Alles auf GitHub →</a>
+      </li>
+    </ul>
+  </section>`;
 
   const koerper = `<div class="start">
 ${kopf("./")}

@@ -9,6 +9,11 @@
     "github": "https://github.com/tschortsch3711",
     "bilderStand": "18.11.2026"
   },
+  "start": {
+    "oben": ["shisha-as-a-service", "3dmensional", "lagerhimmel", "ganachekatze", "von-ka-zu-ki", "fleischbibel", "this-is-tschortsch", "release-pipeline"],
+    "untenGruppe": "betriebsrat",
+    "unten": ["br-selbstcheck", "br-or-not-2-br", "br-simulator"]
+  },
   "gruppen": [
     {
       "id": "betriebe",
