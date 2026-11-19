@@ -15,8 +15,11 @@ const esc = (s) =>
 const ohneBindestrichUmbruch = (s) => s.replace(/-(?=\p{L})/gu, "-⁠");
 // Aussagen tragen Sinnabschnitte, getrennt durch „|“. Umbrochen wird nur dazwischen.
 // Ein Zeilenwechsel „\n“ erzwingt eine neue Zeile in jeder Ansicht.
-const flach = (s) => s.replace(/\s*[|\n]\s*/g, " ");
-const abschnitte = (s) => s.split("\n").map((zeile) => zeile.split(/\s*\|\s*/).map((t) => `<span class="z">${ohneBindestrichUmbruch(esc(t))}</span>`).join(" ")).join("<br>");
+// „¦“ teilt einen Abschnitt noch einmal: Dort bricht er nur, wenn er als Ganzes nicht in die Zeile passt.
+const flach = (s) => s.replace(/\s*[|¦\n]\s*/g, " ");
+const teil = (t) => `<span class="z">${ohneBindestrichUmbruch(esc(t))}</span>`;
+const abschnitt = (t) => t.includes("¦") ? `<span class="z">${t.split(/\s*¦\s*/).map(teil).join(" ")}</span>` : teil(t);
+const abschnitte = (s) => s.split("\n").map((zeile) => zeile.split(/\s*\|\s*/).map(abschnitt).join(" ")).join("<br>");
 const satz = (s) => ohneBindestrichUmbruch(esc(s));
 const nr = (i) => String(i).padStart(2, "0");
 const ohneProtokoll = (url) => url.replace(/^https?:\/\//, "").replace(/\/$/, "");
@@ -207,7 +210,7 @@ function projektseite(p, i) {
       <p class="held-unter">${abschnitte(p.unter)}</p>
       <figure>
         <div class="bild">
-          <img src="${bild}-1600.webp" srcset="${bild}-800.webp 800w, ${bild}-1600.webp 1600w" sizes="(max-width: 64rem) 100vw, 65rem" width="1600" height="1000" alt="${esc(p.bildAlt)}" fetchpriority="high">
+          <img src="${bild}-1600.webp" srcset="${bild}-800.webp 800w, ${bild}-1600.webp 1600w" sizes="(max-width: 64rem) 100vw, 66rem" width="1600" height="1000" alt="${esc(p.bildAlt)}" fetchpriority="high">
         </div>
         <figcaption class="bild-unter etikett">${esc(p.bildUnter || `Screenshot der Live-Seite, ${seite.bilderStand}`)}</figcaption>
       </figure>

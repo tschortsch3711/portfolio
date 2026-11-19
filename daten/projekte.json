@@ -59,7 +59,7 @@
           "slug": "lagerhimmel",
           "name": "Lagerhimmel",
           "satz": "Abschließbare Lagerhallen und Garagen in Kranzberg.",
-          "aussage": "Eine eigene Halle mit eigenem Tor, | zum Mieten in Kranzberg.",
+          "aussage": "Eine eigene Halle zum Abschließen, | zu mieten in Kranzberg.",
           "unter": "16 abschließbare Hallen mit 25 oder 40 m², | eigenem Stromzähler und Starkstrom. | Für Wohnmobil, Oldtimer, Möbel und Gewerbe.",
           "fakten": {
             "was": "Vermietung von 16 Hallen in zwei Größen",
@@ -128,7 +128,7 @@
           "slug": "von-ka-zu-ki",
           "name": "Von K.A. zu K.I.",
           "satz": "Ein verständliches KI-Glossar, über bekannte Fachwelten greifbar gemacht.",
-          "aussage": "KI-Begriffe, sauber erklärt | und durch die Brille | der eigenen Branche gesehen.",
+          "aussage": "KI-Begriffe, sauber erklärt | und durch die Brille der | eigenen Branche\u00a0gesehen.",
           "unter": "Jeder Begriff hat eine fachliche Definition | und daneben mehrere Erklärwelten, | etwa Automotive, Public Sector, Healthcare und Finance & Banking.",
           "fakten": {
             "was": "Analogiebasiertes KI-Glossar mit Suche, Filtern und Lernpfaden",
@@ -147,7 +147,7 @@
             },
             {
               "titel": "Ohne Server",
-              "text": "Die Seite ist komplett statisch. Die Suche läuft im Browser, ohne Server und ohne externe KI-Dienste."
+              "text": "Die Seite ist statisch, die Suche läuft im Browser, ohne Server oder externe KI-Dienste."
             }
           ],
           "links": [
@@ -161,7 +161,7 @@
           "name": "Fleischbibel",
           "satz": "Die zentrale Dokumentation der Fleischgemeinschaft.",
           "aussage": "Alles, was in der Gruppe | zu wichtig ist, | um im Chat unterzugehen.",
-          "unter": "Regeln, Termine, Rituale und Begriffe der Fleischgemeinschaft | an einem Ort, | statt verstreut in Gruppenbeschreibung und Chatverlauf.",
+          "unter": "Regeln, Termine, Rituale und Begriffe der Fleischgemeinschaft | an einem Ort,\nstatt verstreut in Gruppenbeschreibung und Chatverlauf.",
           "fakten": {
             "was": "Dokumentation einer WhatsApp-Gruppe",
             "fuerWen": "Die Fleischgemeinschaft, besonders Neue",
@@ -192,7 +192,7 @@
           "slug": "shisha-as-a-service",
           "name": "Shisha as a Service",
           "satz": "Vier Shisha-Bars zur Wahl, zwischen Freising und Regensburg.",
-          "aussage": "Heute sind wir Kunde.",
+          "aussage": "Heute sind wir mal Kunde.",
           "unter": "Sonst liefern wir den Service, | diesmal bestellen wir ihn.\nUnd achten darauf, welche Qualitätsmerkmale | wichtig sind und warum.",
           "fakten": {
             "was": "Vergleichsseite für eine Verabredung",
@@ -246,7 +246,7 @@
             },
             {
               "titel": "Was erschienen ist",
-              "text": "Die ersten Singles kamen 2025. 2026 folgten weitere Singles, die EP „Oliven & Tomaten“ mit vier Songs und das Album „Was In Prag Passiert Bleibt Nicht In Prag“ mit sieben Songs."
+              "text": "2025 kamen die ersten Singles, 2026 weitere, die EP „Oliven & Tomaten“ mit vier Songs\nund das Album „Was In Prag Passiert Bleibt Nicht In Prag“ mit sieben Songs."
             },
             {
               "titel": "Halb automatisch",
@@ -335,7 +335,7 @@
           "bildPosition": "center top",
           "name": "BR-Selbstcheck",
           "satz": "Ein Selbstcheck für alle, die über eine Kandidatur zum Betriebsrat nachdenken.",
-          "aussage": "Passt eine Kandidatur | zum Betriebsrat zu mir?",
+          "aussage": "Passt eine Kandidatur | als Betriebsrat zu mir?",
           "unter": "15 Aussagen aus sechs Bereichen, | von Zeit über Konflikt bis Rückhalt. | Am Ende stehen ein Gesamtwert, Werte pro Bereich | und persönliche Hinweise.",
           "fakten": {
             "was": "Selbstcheck zur Kandidatur bei der Betriebsratswahl",
@@ -364,8 +364,8 @@
           "bildPosition": "center top",
           "name": "BR or not 2 BR?",
           "satz": "Zur Betriebsratswahl gehen oder nicht? Zwölf Fragen, eine Minute.",
-          "aussage": "Zur Betriebsratswahl gehen? | Zwölf Fragen helfen | beim Entscheiden.",
-          "unter": "Für Unentschlossene, Genervte und Erstwähler. | Nach 30 bis 60 Sekunden gibt es ein Ergebnis | mit den wichtigsten Faktoren und nächsten Schritten.",
+          "aussage": "Zur Betriebsratswahl gehen? | Zwölf Fragen helfen beim Entscheiden.",
+          "unter": "Für Unentschlossene, Genervte und Erstwähler. ¦ Nach 30 bis 60 Sekunden | gibt es ein Ergebnis ¦ mit den wichtigsten Faktoren und nächsten Schritten.",
           "fakten": {
             "was": "Entscheidungshilfe zur Teilnahme an der Betriebsratswahl",
             "fuerWen": "Unentschlossene, Genervte und Erstwähler",

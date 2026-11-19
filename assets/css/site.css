@@ -228,7 +228,7 @@ ul, ol { padding: 0; list-style: none; }
 /* Sinnabschnitte bleiben zusammen, solange sie in eine Zeile passen */
 .held h1 .z, .held-unter .z, .band dd .z { display: inline-block; text-wrap: balance; }
 .held-unter {
-  margin-top: var(--s-5); max-width: var(--lesebreite);
+  margin-top: var(--s-5); max-width: var(--unterbreite);
   font-size: var(--t-gross); color: var(--c-leise);
   text-wrap: balance;
 }

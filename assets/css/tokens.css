@@ -59,9 +59,10 @@
   --l-fett: 2px;
 
   /* Raster */
-  --breite: 65rem;
+  --breite: 66rem;
   --rand: 2rem;
   --lesebreite: 42rem;
+  --unterbreite: 58rem;
 }
 
 @media (max-width: 40rem) {
