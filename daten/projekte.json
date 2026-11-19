@@ -192,8 +192,8 @@
           "slug": "shisha-as-a-service",
           "name": "Shisha as a Service",
           "satz": "Vier Shisha-Bars zur Wahl, zwischen Freising und Regensburg.",
-          "aussage": "Heute sind wir der Kunde.",
-          "unter": "Ein ganz normaler Barbesuch, | nur mit dem Blick, | den wir sonst auf unsere eigenen Services richten.",
+          "aussage": "Heute sind wir Kunde.",
+          "unter": "Sonst liefern wir den Service, | diesmal bestellen wir ihn.\nUnd achten darauf, welche Qualitätsmerkmale | wichtig sind und warum.",
           "fakten": {
             "was": "Vergleichsseite für eine Verabredung",
             "fuerWen": "Alle, die Qualität erleben | statt messen wollen",
@@ -250,7 +250,7 @@
             },
             {
               "titel": "Halb automatisch",
-              "text": "Den Weg von Suno bis Amuse übernimmt eine eigene AI-Release-Pipeline. Veröffentlicht wird ein Song erst, wenn der Feinschliff sitzt."
+              "text": "Den Weg von Suno bis Amuse übernimmt eine eigene AI-Release-Pipeline.\nVeröffentlicht wird ein Song erst, wenn der Feinschliff sitzt."
             }
           ],
           "links": [
@@ -263,13 +263,13 @@
           "slug": "release-pipeline",
           "name": "Release-Pipeline",
           "satz": "Wie aus einem Erlebnis ein Song auf Spotify wird.",
-          "aussage": "Aus gemeinsamen Erlebnissen | werden Erinnerungen, | die man hören kann.",
-          "unter": "Ein Fotoalbum schlägt man selten auf. | Ein Song läuft einfach mit: | im Auto, beim Kochen | und in der Playlist der Freunde, die dabei waren.",
+          "aussage": "Aus Erlebnissen werden | Erinnerungen,\ndie man hören kann.",
+          "unter": "Ein Fotoalbum schlägt man selten auf. | Ein Song läuft einfach mit:\nIm Auto, beim Kochen | und in der Playlist der Freunde, die dabei waren.",
           "fakten": {
             "was": "Release-Pipeline für die Songs von tschortsch",
             "fuerWen": "Für den eigenen Gebrauch",
             "womit": "Agentische KI im Browser, Python und JavaScript",
-            "stand": "In Gebrauch seit September 2026, Repo privat"
+            "stand": "In Gebrauch seit September 2026, | Repo privat"
           },
           "absaetze": [
             {
@@ -290,7 +290,7 @@
             { "was": "Spotify", "url": "https://open.spotify.com/artist/4StU5O0sjXiyuYFDU4IFiL" }
           ],
           "bildUnter": "Ablauf der Pipeline, eigene Grafik",
-          "bildAlt": "Ablauf der Pipeline in acht Feldern: Erlebt, Entwurf, Suno, Download, Cover, Release, Lyrics und Spotify. Suno und Download tragen das Etikett Freigabe, Cover das Etikett Auf Anfrage, Release das Etikett Go."
+          "bildAlt": "Ablauf der Pipeline in acht Feldern: Erlebnis, Entwurf, Suno, Download, Cover, Release, Lyrics und Spotify. Suno und Download tragen das Etikett Freigabe, Cover das Etikett Auf Anfrage, Release das Etikett Go."
         }
       ]
     },
