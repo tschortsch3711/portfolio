@@ -81,9 +81,9 @@ ul, ol { padding: 0; list-style: none; }
   text-wrap: balance;
 }
 .einleitung p { font-size: var(--t-gross); color: var(--c-leise); }
-/* Jede Zeile der Einleitung beginnt neu und bricht nur zwischen ihren Sinnabschnitten um */
+/* Jeder Satz der Einleitung beginnt in einer eigenen Zeile und bricht gleichmäßig um */
 .einleitung p > span { display: block; text-wrap: balance; }
-.einleitung p .z { display: inline-block; text-wrap: balance; }
+.einleitung br.weit { display: none; }
 
 .start main { display: grid; min-height: 0; }
 .raster {
@@ -149,6 +149,9 @@ ul, ol { padding: 0; list-style: none; }
   .einleitung { grid-template-columns: auto 1fr; gap: 0; }
   .einleitung h1, .einleitung p span { white-space: nowrap; }
   .einleitung p { justify-self: center; }
+  /* Hier bricht die Einleitung nach den Prototypen um, der letzte Satz rückt in die zweite Zeile */
+  .einleitung p > span { display: inline; }
+  .einleitung br.weit { display: inline; }
 }
 @media (max-width: 64rem) {
   .start { display: block; }

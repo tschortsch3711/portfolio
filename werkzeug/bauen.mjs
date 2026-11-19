@@ -19,6 +19,8 @@ const ohneBindestrichUmbruch = (s) => s.replace(/-(?=\p{L})/gu, "-⁠");
 const flach = (s) => s.replace(/\s*[|¦\n]\s*/g, " ").replace(/\u00ad/g, "");
 const teil = (t) => `<span class="z">${ohneBindestrichUmbruch(esc(t))}</span>`;
 const abschnitt = (t) => t.includes("¦") ? `<span class="z">${t.split(/\s*¦\s*/).map(teil).join(" ")}</span>` : teil(t);
+// In der Einleitung markiert „|“ den Zeilenwechsel, der nur in sehr breiten Fenstern gilt.
+const einleitungSatz = (s) => s.split(/\s*\|\s*/).map(satz).join('<br class="weit"> ');
 const abschnitte = (s) => s.split("\n").map((zeile) => zeile.split(/\s*\|\s*/).map(abschnitt).join(" ")).join("<br>");
 const satz = (s) => ohneBindestrichUmbruch(esc(s));
 const nr = (i) => String(i).padStart(2, "0");
@@ -130,7 +132,7 @@ function startseite() {
 ${kopf("./")}
 <section class="einleitung">
   <h1>${esc(seite.einleitungTitel)}</h1>
-  <p>${[].concat(seite.einleitung).map((zeile) => `<span>${abschnitte(zeile)}</span>`).join(" ")}</p>
+  <p>${[].concat(seite.einleitung).map((satz) => `<span>${einleitungSatz(satz)}</span>`).join(" ")}</p>
 </section>
 <main id="inhalt">
 <ul class="raster">
