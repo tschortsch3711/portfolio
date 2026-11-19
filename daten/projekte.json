@@ -28,8 +28,8 @@
           "slug": "3dmensional",
           "name": "3Dmensional",
           "satz": "3D-Druck, Konstruktion und Gravur in Kranzberg bei Freising.",
-          "aussage": "Bauteile aus dem 3D-Drucker, nach Maß gemacht in Kranzberg.",
-          "unter": "Prototypen, Ersatzteile, Kleinserien und Einzelstücke für Privatleute und Betriebe. Fehlt die Datei, entsteht das Teil aus Maßen, Skizze oder Original.",
+          "aussage": "Bauteile aus dem 3D-Drucker, | nach Maß gemacht in Kranzberg.",
+          "unter": "Prototypen, Ersatzteile, Kleinserien und Einzelstücke | für Privatleute und Betriebe. | Fehlt die Datei, entsteht das Teil aus Maßen, Skizze oder Original.",
           "fakten": {
             "was": "3D-Druck, Konstruktion, Lasergravur und CNC-Fräsen",
             "fuerWen": "Privatleute und Betriebe in und um Freising",
@@ -59,8 +59,8 @@
           "slug": "lagerhimmel",
           "name": "Lagerhimmel",
           "satz": "Abschließbare Lagerhallen und Garagen in Kranzberg.",
-          "aussage": "Eine eigene Halle mit eigenem Tor, zum Mieten in Kranzberg.",
-          "unter": "16 abschließbare Hallen mit 25 oder 40 m², eigenem Stromzähler und Starkstrom. Für Wohnmobil, Oldtimer, Möbel und Gewerbe.",
+          "aussage": "Eine eigene Halle mit eigenem Tor, | zum Mieten in Kranzberg.",
+          "unter": "16 abschließbare Hallen mit 25 oder 40 m², | eigenem Stromzähler und Starkstrom. | Für Wohnmobil, Oldtimer, Möbel und Gewerbe.",
           "fakten": {
             "was": "Vermietung von 16 Hallen in zwei Größen",
             "fuerWen": "Wer Wohnmobil, Auto, Möbel oder Material unterstellen will",
@@ -91,8 +91,8 @@
           "bildPosition": "center top",
           "name": "Ganachekatze",
           "satz": "Backblog, Rezepte und Shop rund ums Backen mit Wow-Effekt.",
-          "aussage": "Ein Backblog mit Rezepten, Shop und eigenem Backbuch.",
-          "unter": "Torten, Guglhupf, Cookies und Plätzchen, dazu E-Books mit Rezepten und das Buch „Einfach backen mit Wow-Effekt“.",
+          "aussage": "Ein Backblog mit Rezepten, | Shop und eigenem Backbuch.",
+          "unter": "Torten, Guglhupf, Cookies und Plätzchen, | dazu E-Books mit Rezepten | und das Buch „Einfach backen mit Wow-Effekt“.",
           "fakten": {
             "was": "Blog, Shop und Buchseite",
             "fuerWen": "Hobbybäckerinnen und Hobbybäcker",
@@ -128,8 +128,8 @@
           "slug": "von-ka-zu-ki",
           "name": "Von K.A. zu K.I.",
           "satz": "Ein verständliches KI-Glossar, über bekannte Fachwelten greifbar gemacht.",
-          "aussage": "KI-Begriffe, sauber erklärt und durch die Brille der eigenen Branche gesehen.",
-          "unter": "Jeder Begriff hat eine fachliche Definition und daneben mehrere Erklärwelten, etwa Automotive, Public Sector, Healthcare und Finance & Banking.",
+          "aussage": "KI-Begriffe, sauber erklärt | und durch die Brille | der eigenen Branche gesehen.",
+          "unter": "Jeder Begriff hat eine fachliche Definition | und daneben mehrere Erklärwelten, | etwa Automotive, Public Sector, Healthcare und Finance & Banking.",
           "fakten": {
             "was": "Analogiebasiertes KI-Glossar mit Suche, Filtern und Lernpfaden",
             "fuerWen": "Menschen, die mit KI arbeiten, aber keine KI-Fachleute sind",
@@ -160,8 +160,8 @@
           "slug": "fleischbibel",
           "name": "Fleischbibel",
           "satz": "Die zentrale Dokumentation der Fleischgemeinschaft.",
-          "aussage": "Alles, was in der Gruppe zu wichtig ist, um im Chat unterzugehen.",
-          "unter": "Regeln, Termine, Rituale und Begriffe der Fleischgemeinschaft an einem Ort, statt verstreut in Gruppenbeschreibung und Chatverlauf.",
+          "aussage": "Alles, was in der Gruppe | zu wichtig ist, | um im Chat unterzugehen.",
+          "unter": "Regeln, Termine, Rituale und Begriffe der Fleischgemeinschaft | an einem Ort, | statt verstreut in Gruppenbeschreibung und Chatverlauf.",
           "fakten": {
             "was": "Dokumentation einer WhatsApp-Gruppe",
             "fuerWen": "Die Fleischgemeinschaft, besonders Neue",
@@ -193,12 +193,12 @@
           "name": "Shisha as a Service",
           "satz": "Vier Shisha-Bars zur Wahl, zwischen Freising und Regensburg.",
           "aussage": "Heute sind wir der Kunde.",
-          "unter": "Ein ganz normaler Barbesuch, nur mit dem Blick, den wir sonst auf unsere eigenen Services richten.",
+          "unter": "Ein ganz normaler Barbesuch, | nur mit dem Blick, | den wir sonst auf unsere eigenen Services richten.",
           "fakten": {
             "was": "Vergleichsseite für eine Verabredung",
-            "fuerWen": "Alle, die Qualität erleben statt messen wollen",
-            "wozu": "Um Service einen Abend lang so zu erleben, wie ihn der Kunde erlebt",
-            "wert": "Der Blick des Kunden, den im IT-Betrieb keine Kennzahl liefert"
+            "fuerWen": "Alle, die Qualität erleben | statt messen wollen",
+            "wozu": "Einen Abend lang | Service erleben | wie ein Kunde",
+            "wert": "Der Blick des Kunden, | den im echten Betrieb | keine Kennzahl liefert"
           },
           "absaetze": [
             {
@@ -231,8 +231,8 @@
           "bildPosition": "center top",
           "name": "This is tschortsch",
           "satz": "Eigene Songs auf Spotify, entstanden mit Suno.",
-          "aussage": "Songs als tschortsch, von der Idee bis auf Spotify.",
-          "unter": "Seit 2025 sind 39 Veröffentlichungen mit zusammen 50 Songs erschienen: 37 Singles, eine EP und ein Album.",
+          "aussage": "Songs als tschortsch, | von der Idee bis auf Spotify.",
+          "unter": "Seit 2025 sind 39 Veröffentlichungen mit zusammen 50 Songs erschienen: | 37 Singles, eine EP und ein Album.",
           "fakten": {
             "was": "Eigene Musik unter dem Namen tschortsch",
             "fuerWen": "Alle, die reinhören wollen",
@@ -263,12 +263,12 @@
           "slug": "release-pipeline",
           "name": "Release-Pipeline",
           "satz": "Wie aus einem Erlebnis ein Song auf Spotify wird.",
-          "aussage": "Aus gemeinsamen Erlebnissen werden Erinnerungen, die man hören kann.",
-          "unter": "Ein Fotoalbum schlägt man selten auf. Ein Song läuft einfach mit: im Auto, beim Kochen und in der Playlist der Freunde, die dabei waren.",
+          "aussage": "Aus gemeinsamen Erlebnissen | werden Erinnerungen, | die man hören kann.",
+          "unter": "Ein Fotoalbum schlägt man selten auf. | Ein Song läuft einfach mit: | im Auto, beim Kochen | und in der Playlist der Freunde, die dabei waren.",
           "fakten": {
             "was": "Release-Pipeline für die Songs von tschortsch",
             "fuerWen": "Für den eigenen Gebrauch",
-            "womit": "Claude Code, Claude in Chrome, Python und JavaScript",
+            "womit": "Agentische KI im Browser, Python und JavaScript",
             "stand": "In Gebrauch seit September 2026, Repo privat"
           },
           "absaetze": [
@@ -302,8 +302,8 @@
           "slug": "br-simulator",
           "name": "BR-Simulator",
           "satz": "Eine Woche Betriebsratsarbeit als Text-Simulation im Browser.",
-          "aussage": "Eine Woche im Betriebsrat, gespielt im Terminal.",
-          "unter": "Ein Story-Simulator mit Befehlen statt Klicks. Man entscheidet über Fälle, Verhandlungen und Fristen und sieht, was das mit Vertrauen, Stress und dem Gremium macht.",
+          "aussage": "Eine Woche im Betriebsrat, | gespielt im Terminal.",
+          "unter": "Ein Story-Simulator mit Befehlen statt Klicks. | Man entscheidet über Fälle, Verhandlungen und Fristen | und sieht, was das mit Vertrauen, Stress | und dem Gremium macht.",
           "fakten": {
             "was": "Lern-Simulation zur Betriebsratsarbeit",
             "fuerWen": "Mitarbeitende, die wissen wollen, wie sich BR-Arbeit anfühlt",
@@ -335,8 +335,8 @@
           "bildPosition": "center top",
           "name": "BR-Selbstcheck",
           "satz": "Ein Selbstcheck für alle, die über eine Kandidatur zum Betriebsrat nachdenken.",
-          "aussage": "Passt eine Kandidatur zum Betriebsrat zu mir?",
-          "unter": "15 Aussagen aus sechs Bereichen, von Zeit über Konflikt bis Rückhalt. Am Ende stehen ein Gesamtwert, Werte pro Bereich und persönliche Hinweise.",
+          "aussage": "Passt eine Kandidatur | zum Betriebsrat zu mir?",
+          "unter": "15 Aussagen aus sechs Bereichen, | von Zeit über Konflikt bis Rückhalt. | Am Ende stehen ein Gesamtwert, Werte pro Bereich | und persönliche Hinweise.",
           "fakten": {
             "was": "Selbstcheck zur Kandidatur bei der Betriebsratswahl",
             "fuerWen": "Mitarbeitende, die über eine Kandidatur nachdenken",
@@ -364,8 +364,8 @@
           "bildPosition": "center top",
           "name": "BR or not 2 BR?",
           "satz": "Zur Betriebsratswahl gehen oder nicht? Zwölf Fragen, eine Minute.",
-          "aussage": "Zur Betriebsratswahl gehen? Zwölf Fragen helfen beim Entscheiden.",
-          "unter": "Für Unentschlossene, Genervte und Erstwähler. Nach 30 bis 60 Sekunden gibt es ein Ergebnis mit den wichtigsten Faktoren und nächsten Schritten.",
+          "aussage": "Zur Betriebsratswahl gehen? | Zwölf Fragen helfen | beim Entscheiden.",
+          "unter": "Für Unentschlossene, Genervte und Erstwähler. | Nach 30 bis 60 Sekunden gibt es ein Ergebnis | mit den wichtigsten Faktoren und nächsten Schritten.",
           "fakten": {
             "was": "Entscheidungshilfe zur Teilnahme an der Betriebsratswahl",
             "fuerWen": "Unentschlossene, Genervte und Erstwähler",
@@ -374,7 +374,7 @@
           },
           "absaetze": [
             {
-              "titel": "Kürzer als die Kaffeeschlange",
+              "titel": "Kürzer als die\u00a0Kaffeeschlange",
               "text": "So lange dauert Wählen meistens, erinnert die Seite. Die zwölf Fragen gehen trotzdem in die Tiefe: Motivation, Hürden, Vertrauen, Werte und Information."
             },
             {

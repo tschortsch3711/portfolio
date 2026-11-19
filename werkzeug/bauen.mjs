@@ -13,6 +13,10 @@ const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 // In großen Titeln nicht am Bindestrich umbrechen ("3D-|Drucker"): Wortverbinder U+2060 dahinter
 const ohneBindestrichUmbruch = (s) => s.replace(/-(?=\p{L})/gu, "-⁠");
+// Aussagen tragen Sinnabschnitte, getrennt durch „|“. Umbrochen wird nur dazwischen.
+const flach = (s) => s.replace(/\s*\|\s*/g, " ");
+const abschnitte = (s) => s.split(/\s*\|\s*/).map((t) => `<span class="z">${ohneBindestrichUmbruch(esc(t))}</span>`).join(" ");
+const satz = (s) => ohneBindestrichUmbruch(esc(s));
 const nr = (i) => String(i).padStart(2, "0");
 const ohneProtokoll = (url) => url.replace(/^https?:\/\//, "").replace(/\/$/, "");
 
@@ -86,7 +90,7 @@ function startseite() {
         <span class="kachel-nr" aria-hidden="true">${p.nr}</span>
         <span class="kachel-name">${esc(p.name)}</span>
         <span class="kachel-gruppe etikett">${esc(p.gruppe.name)}</span>
-        <span class="kachel-satz">${esc(p.satz)}</span>
+        <span class="kachel-satz">${satz(p.satz)}</span>
       </span>
     </a>
   </li>`;
@@ -169,14 +173,14 @@ function projektseite(p, i) {
     p.fakten.wozu ? ["Wozu", p.fakten.wozu] : ["Womit gebaut", p.fakten.womit],
     p.fakten.wert ? ["Wert", p.fakten.wert] : ["Stand", p.fakten.stand],
   ]
-    .map(([k, v]) => `      <div><dt class="etikett">${k}</dt><dd>${esc(v)}</dd></div>`)
+    .map(([k, v]) => `      <div><dt class="etikett">${k}</dt><dd>${abschnitte(v)}</dd></div>`)
     .join("\n");
 
   const absaetze = p.absaetze
     .map(
       (a) => `      <div class="text-block">
         <h2>${esc(a.titel)}</h2>
-        <div><p>${esc(a.text).replace(/\n/g, "<br>")}</p></div>
+        <div><p>${satz(a.text).replace(/\n/g, ' <br class="breit">')}</p></div>
       </div>`
     )
     .join("\n");
@@ -198,8 +202,8 @@ function projektseite(p, i) {
   <div class="rahmen">
     <section class="held" aria-labelledby="aussage">
       <p class="etikett"><span>${esc(p.gruppe.name)}</span><span>${p.nr} / ${nr(alle.length)}</span><span>${esc(p.name)}</span></p>
-      <h1 id="aussage">${ohneBindestrichUmbruch(esc(p.aussage))}</h1>
-      <p class="held-unter">${esc(p.unter)}</p>
+      <h1 id="aussage">${abschnitte(p.aussage)}</h1>
+      <p class="held-unter">${abschnitte(p.unter)}</p>
       <figure>
         <div class="bild">
           <img src="${bild}-1600.webp" srcset="${bild}-800.webp 800w, ${bild}-1600.webp 1600w" sizes="(max-width: 64rem) 100vw, 60rem" width="1600" height="1000" alt="${esc(p.bildAlt)}" fetchpriority="high">
@@ -233,7 +237,7 @@ ${links}
   return seitenRahmen(
     kopfdaten({
       titel: `${p.name} · ${seite.name}`,
-      beschreibung: `${p.aussage} ${p.unter}`,
+      beschreibung: `${flach(p.aussage)} ${flach(p.unter)}`,
       url,
       bild: `${seite.url}assets/bilder/og/${p.slug}.jpg`,
       bildAlt: p.bildAlt,
