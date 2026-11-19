@@ -106,11 +106,11 @@
             },
             {
               "titel": "Das Buch",
-              "text": "„Einfach backen mit Wow-Effekt“ hat 160 Seiten und über 50 Backideen, von Torten bis Cookies, jeweils mit Zutaten, Zeit und Mengen."
+              "text": "„Einfach backen mit Wow-Effekt“ hat 160 Seiten und über 50 Backideen,\nvon Torten bis Cookies, jeweils mit Zutaten, Zeit und Mengen."
             },
             {
               "titel": "Der Shop",
-              "text": "Im Shop gibt es E-Books wie „Cookie Therapy: Chunky & Creamy“ und „Auf die Plätzchen, fertig, los!“."
+              "text": "Ein kleiner Shop für alle, die weiterbacken wollen:\nZwei E-Books und das eigene Backbuch."
             }
           ],
           "links": [
@@ -192,13 +192,13 @@
           "slug": "shisha-as-a-service",
           "name": "Shisha as a Service",
           "satz": "Vier Shisha-Bars zur Wahl, zwischen Freising und Regensburg.",
-          "aussage": "Vier Shisha-Bars für einen Donnerstag, sortiert nach fairer Fahrzeit.",
-          "unter": "Eine kleine Seite für ein Treffen am 19.11.2026. Wer sie bekommt, sucht sich eine Bar aus und schickt die Nummer zurück.",
+          "aussage": "Heute sind wir der Kunde.",
+          "unter": "Ein ganz normaler Barbesuch, nur mit dem Blick, den wir sonst auf unsere eigenen Services richten.",
           "fakten": {
             "was": "Vergleichsseite für eine Verabredung",
-            "fuerWen": "Zwei Leute, die sich zwischen Freising und Regensburg treffen",
-            "womit": "Eine einzige HTML-Datei, kein externes JavaScript, kein Tracking",
-            "stand": "Gebaut am 18.11.2026"
+            "fuerWen": "Alle, die Qualität erleben statt messen wollen",
+            "wozu": "Um Service einen Abend lang so zu erleben, wie ihn der Kunde erlebt",
+            "wert": "Der Blick des Kunden, den im IT-Betrieb keine Kennzahl liefert"
           },
           "absaetze": [
             {
@@ -210,8 +210,8 @@
               "text": "Je nach Startort vier von sechs Bars zwischen Abensberg, Landshut, Moosburg, Erding und Neufahrn. Jede Karte zeigt Sterne, Fahrzeiten und Stimmen aus den Bewertungen, auch die kritischen."
             },
             {
-              "titel": "Wie es entstand",
-              "text": "Vorher wurden drei Layouts verglichen: Vergleichsliste, Strecke und eine Bar pro Bildschirm. Die Strecke hat gewonnen. Ganz unten wartet ein kleiner Service-Check zum Augenzwinkern."
+              "titel": "Die Kriterien",
+              "text": "Time to first Kohle, proaktives Monitoring, Change Request und Kundenbewertung: Daran messen wir den Service vor Ort."
             }
           ],
           "links": [
@@ -242,7 +242,7 @@
           "absaetze": [
             {
               "titel": "Wie ein Song entsteht",
-              "text": "Am Anfang steht eine eingesprochene Idee. Daraus werden Titel, Text und eine Stilbeschreibung für Suno. Suno erzeugt die Musik, das Cover entsteht mit ChatGPT, veröffentlicht wird über Amuse."
+              "text": "Am Anfang steht ein Erlebnis, einfach erzählt. Daraus werden Titel, Text und eine Stilbeschreibung für Suno. Suno erzeugt die Musik, das Cover entsteht mit ChatGPT, veröffentlicht wird über Amuse."
             },
             {
               "titel": "Was erschienen ist",
@@ -250,7 +250,7 @@
             },
             {
               "titel": "Halb automatisch",
-              "text": "Die Schritte von Suno bis Amuse laufen über eine eigene Pipeline mit Claude Code, das die Weboberflächen im Browser bedient. Generiert, heruntergeladen und abgeschickt wird erst nach Freigabe."
+              "text": "Den Weg von Suno bis Amuse übernimmt eine eigene AI-Release-Pipeline. Veröffentlicht wird ein Song erst, wenn der Feinschliff sitzt."
             }
           ],
           "links": [
@@ -262,9 +262,9 @@
         {
           "slug": "release-pipeline",
           "name": "Release-Pipeline",
-          "satz": "Wie aus einer Songidee ein Release auf Spotify wird, mit Claude Code.",
-          "aussage": "Claude Code bringt die Songs auf Spotify, aber nur nach Freigabe.",
-          "unter": "Ein Claude-Code-Projekt mit neun Skills und 21 Skripten. Es bedient Suno, ChatGPT, Amuse und Musixmatch im Browser. Generiert, heruntergeladen und abgeschickt wird nur nach ausdrücklicher Freigabe.",
+          "satz": "Wie aus einem Erlebnis ein Song auf Spotify wird.",
+          "aussage": "Aus gemeinsamen Erlebnissen werden Erinnerungen, die man hören kann.",
+          "unter": "Ein Fotoalbum schlägt man selten auf. Ein Song läuft einfach mit: im Auto, beim Kochen und in der Playlist der Freunde, die dabei waren.",
           "fakten": {
             "was": "Release-Pipeline für die Songs von tschortsch",
             "fuerWen": "Für den eigenen Gebrauch",
@@ -290,7 +290,7 @@
             { "was": "Spotify", "url": "https://open.spotify.com/artist/4StU5O0sjXiyuYFDU4IFiL" }
           ],
           "bildUnter": "Ablauf der Pipeline, eigene Grafik",
-          "bildAlt": "Ablauf der Pipeline in acht Feldern: Idee, Entwurf, Suno, Download, Cover, Release, Lyrics und Spotify. Suno und Download tragen das Etikett Freigabe, Cover das Etikett Auf Anfrage, Release das Etikett Go."
+          "bildAlt": "Ablauf der Pipeline in acht Feldern: Erlebt, Entwurf, Suno, Download, Cover, Release, Lyrics und Spotify. Suno und Download tragen das Etikett Freigabe, Cover das Etikett Auf Anfrage, Release das Etikett Go."
         }
       ]
     },

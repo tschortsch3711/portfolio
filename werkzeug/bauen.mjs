@@ -165,8 +165,9 @@ function projektseite(p, i) {
   const fakten = [
     ["Was", p.fakten.was],
     ["Für wen", p.fakten.fuerWen],
-    ["Womit gebaut", p.fakten.womit],
-    ["Stand", p.fakten.stand],
+    // Ein Projekt kann statt Bauweise und Stand seinen Nutzen nennen
+    p.fakten.wozu ? ["Wozu", p.fakten.wozu] : ["Womit gebaut", p.fakten.womit],
+    p.fakten.wert ? ["Wert", p.fakten.wert] : ["Stand", p.fakten.stand],
   ]
     .map(([k, v]) => `      <div><dt class="etikett">${k}</dt><dd>${esc(v)}</dd></div>`)
     .join("\n");
@@ -219,14 +220,12 @@ ${absaetze}
       <div class="gruppe-kopf"><h2 class="etikett" id="weiter">Weiter</h2></div>
       <ul class="weiter-liste">
 ${links}
-        <li>
-          <a class="weiter-link" href="${w}projekte/${naechstes.slug}/">
-            <span class="weiter-was">Nächstes Projekt</span>
-            <span class="weiter-wo">${esc(naechstes.name)}</span>
-            <span class="zeile-pfeil" aria-hidden="true">→</span>
-          </a>
-        </li>
       </ul>
+      <a class="naechstes" href="${w}projekte/${naechstes.slug}/">
+        <span class="etikett">Nächstes Projekt</span>
+        <span class="naechstes-name">${esc(naechstes.name)}</span>
+        <span class="naechstes-pfeil" aria-hidden="true">→</span>
+      </a>
     </nav>
   </div>
 </main>`;

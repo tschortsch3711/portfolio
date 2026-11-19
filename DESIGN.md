@@ -27,11 +27,11 @@ Alle Werte stehen als CSS-Variablen in [`assets/css/tokens.css`](assets/css/toke
 
 **Projekt-Hero** `.held`: Etikett mit Gruppe und Nummer, darunter die Aussage in einem Satz in der größten Stufe, dann ein kurzer Untertitel und ein Screenshot der Live-Seite mit 1-px-Rahmen.
 
-**Fakten-Band** `.band`: Vier Felder zwischen zwei 2-px-Linien: Was, Für wen, Womit gebaut, Stand. Auf dem Handy zwei mal zwei.
+**Fakten-Band** `.band`: Vier Felder zwischen zwei 2-px-Linien: Was, Für wen, Womit gebaut, Stand. Ein Projekt kann die letzten beiden durch Wozu und Wert ersetzen (`fakten.wozu`, `fakten.wert`). Auf dem Handy zwei mal zwei.
 
 **Absätze** `.text`: Kurze Zwischentitel links, Text rechts. Auf dem Handy untereinander.
 
-**Weiter** `.weiter`: Zeilen im Stil der Projektzeile mit Live-Seite, Repo (nur wenn öffentlich) und dem nächsten Projekt.
+**Weiter** `.weiter`, `.naechstes`: Zeilen im Stil der Projektzeile mit Live-Seite und Repo (nur wenn öffentlich). Darunter, mit Abstand, das nächste Projekt als schwarzer Balken mit großem Namen und Pfeil.
 
 Eine Fußzeile gibt es nicht. Der Link zu GitHub steht in der Kopfzeile und im Stempel.
 
