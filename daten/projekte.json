@@ -219,12 +219,12 @@
             {
               "name": "Token mit Schlüsselring",
               "text": "Münze mit Emblem vorn und einem von fünf Motiven hinten, wahlweise mit Loch für den Schlüsselring.",
-              "bild": "token_logo_seit2004_loch"
+              "bild": "token_logo_seit1983_loch"
             },
             {
               "name": "Einkaufswagenchips",
               "text": "Im Maß der 1-Euro-Münze, beidseitig bedruckt. Vier Farbwelten aus derselben Geometrie.",
-              "bild": "chip_logo_seit2004"
+              "bild": "chip_logo_seit1983"
             },
             {
               "name": "Uptime-Untersetzer",
