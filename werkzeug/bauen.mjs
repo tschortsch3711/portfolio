@@ -4,8 +4,12 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 
 const wurzel = join(dirname(fileURLToPath(import.meta.url)), "..");
+// Jede Fassung der Stylesheets bekommt eine eigene Adresse, damit nie neues HTML auf altes CSS trifft
+const fassung = (datei) => createHash("sha256").update(readFileSync(join(wurzel, datei))).digest("hex").slice(0, 8);
+const css = (wurzelPfad, name) => `${wurzelPfad}assets/css/${name}.css?v=${fassung(`assets/css/${name}.css`)}`;
 const daten = JSON.parse(readFileSync(join(wurzel, "daten/projekte.json"), "utf8"));
 const { seite, gruppen } = daten;
 
@@ -57,8 +61,8 @@ function kopfdaten({ titel, beschreibung, url, bild, bildAlt, wurzelPfad, typ })
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="${wurzelPfad}favicon.svg" type="image/svg+xml">
 <link rel="preload" href="${wurzelPfad}fonts/Sen/Sen-Bold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="${wurzelPfad}assets/css/tokens.css">
-<link rel="stylesheet" href="${wurzelPfad}assets/css/site.css">`;
+<link rel="stylesheet" href="${css(wurzelPfad, "tokens")}">
+<link rel="stylesheet" href="${css(wurzelPfad, "site")}">`;
 }
 
 function kopf(wurzelPfad) {
