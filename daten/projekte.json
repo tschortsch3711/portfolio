@@ -14,7 +14,7 @@
   },
   "start": {
     "reihenfolge": [
-      "3dmensional", "lagerhimmel", "ganachekatze", "shisha-as-a-service",
+      "3dmensional", "lagerhimmel", "ganachekatze", "bechtle-3d-druck", "shisha-as-a-service",
       "von-ka-zu-ki", "fleischbibel", "this-is-tschortsch", "release-pipeline",
       "br-or-not-2-br", "br-selbstcheck", "br-simulator"
     ]
@@ -187,6 +187,93 @@
             { "was": "Repo", "url": "https://github.com/tschortsch3711/fleischbibel" }
           ],
           "bildAlt": "Startseite der Fleischbibel mit dem Titel „Die Fleischbibel“ und Kacheln für Gemeinschaft, Regeln und Organisation"
+        },
+        {
+          "slug": "bechtle-3d-druck",
+          "name": "Bechtle-Merch",
+          "satz": "Neun Modelle aus dem 3D-Drucker. Privates Fanprojekt ohne Verbindung zur Bechtle AG.",
+          "kachelHinweis": "Privates, nicht kommerzielles Fan- und Lernprojekt ohne Verbindung zur Bechtle AG.",
+          "aussage": "Der IT-Alltag zum Anfassen, | in Farbe gedruckt.",
+          "unter": "Neun Modelle für Schreibtisch und Schlüsselbund, | vom Deploy-Würfel bis zum Uptime-Untersetzer.\nJedes gibt es mit Logo | und als neutrale Fassung.",
+          "fakten": {
+            "was": "Neun Merch-Modelle | für den Mehrfarbdruck",
+            "fuerWen": "Alle mit IT-Humor | am Schreibtisch",
+            "womit": "Python, Fusion-API, | Bambu Studio",
+            "stand": "Live, Open Source (MIT), | außer Name\u00a0und\u00a0Logo"
+          },
+          "absaetze": [
+            {
+              "titel": "Parametrisch modelliert",
+              "text": "Jedes Teil ist ein Python-Skript für die Fusion-API. Maße, Texte und Farben sind Parameter, Varianten entstehen per Schleife."
+            },
+            {
+              "titel": "Farben als Einlagen",
+              "text": "Schrift und Grafik liegen 0,6 bis 1 mm tief im Körper, bündig und auf das Schichtraster abgestimmt. So bleibt die Oberfläche plan, gedruckt wird mehrfarbig ohne Stützen."
+            },
+            {
+              "titel": "Druckfertig exportiert",
+              "text": "Ein Skript baut Projekte für Bambu Studio mit fest zugeordneten Filamenten und einer Platte je Kategorie. Die Slicer-Einstellungen sind am Drucker abgestimmt."
+            }
+          ],
+          "modelle": [
+            {
+              "name": "Token mit Schlüsselring",
+              "text": "Münze mit Emblem vorn und einem von fünf Motiven hinten, wahlweise mit Loch für den Schlüsselring.",
+              "bild": "token_logo_seit2004_loch"
+            },
+            {
+              "name": "Einkaufswagenchips",
+              "text": "Im Maß der 1-Euro-Münze, beidseitig bedruckt. Vier Farbwelten aus derselben Geometrie.",
+              "bild": "chip_logo_seit2004"
+            },
+            {
+              "name": "Uptime-Untersetzer",
+              "text": "Prompt, große Uptime-Zahl und Pulslinie, alles bündig, damit das Glas plan steht.",
+              "bild": "untersetzer_logo_oben"
+            },
+            {
+              "name": "Handyständer „On Call“",
+              "text": "Ein Teil, 70 Grad Lehne, Nut für Handys mit Hülle. Vorn „ON CALL“ mit Statuspunkt.",
+              "bild": "handystaender_logo_leer"
+            },
+            {
+              "name": "Deploy-Würfel",
+              "text": "Entscheidungswürfel fürs Team: SHIP IT, ROLLBACK, REBOOT, TESTEN, TICKET.",
+              "bild": "wuerfel_logo"
+            },
+            {
+              "name": "HE-Lineal",
+              "text": "Misst Höheneinheiten im 19-Zoll-Raster, unten Zentimeter bis 15.",
+              "bild": "lineal_logo_oben"
+            },
+            {
+              "name": "Rack-Stiftehalter",
+              "text": "Stiftehalter im Server-Look mit drei Fächern und einrastender Wechselblende.",
+              "bild": "stiftehalter_logo"
+            },
+            {
+              "name": "Drehzähler „Stabiler Betrieb“",
+              "text": "Drei Ziffernwalzen wie beim Kilometerzähler, mit dem Daumen gedreht, jede rastet in zehn Stellungen.",
+              "bild": "drehzaehler_logo"
+            },
+            {
+              "name": "Zahnrad-Trio „Plan Build Run“",
+              "text": "Drei Zahnräder mit Evolventenverzahnung, die auf der Grundplatte ineinandergreifen.",
+              "bild": "zahnrad_logo"
+            }
+          ],
+          "hinweis": "Privates, nicht kommerzielles Fan- und Lernprojekt ohne Verbindung zur Bechtle AG, von ihr weder beauftragt noch unterstützt. „Bechtle“ und das Bechtle-Logo sind Marken der Bechtle AG. Die Modelle mit Logo sind nur für den privaten Gebrauch gedacht; Verkauf oder werbliche Nutzung brauchen die Zustimmung der Bechtle AG. Zu jedem Modell gibt es eine neutrale Fassung ohne Logo.",
+          "links": [
+            {
+              "was": "Live-Seite",
+              "url": "https://tschortsch3711.github.io/bechtle-3d-druck/"
+            },
+            {
+              "was": "Repo",
+              "url": "https://github.com/tschortsch3711/bechtle-3d-druck"
+            }
+          ],
+          "bildAlt": "Übersichtsseite von Bechtle-Merch aus dem 3D-Drucker mit Kurzbeschreibung, Token, Einkaufswagenchip und Uptime-Untersetzer"
         },
         {
           "slug": "shisha-as-a-service",

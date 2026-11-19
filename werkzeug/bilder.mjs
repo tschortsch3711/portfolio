@@ -31,6 +31,7 @@ const ZIELE = {
   ganachekatze: { url: "https://ganachekatze.de/", scrollZu: "Aus dem Ofen, auf den Blog" },
   "von-ka-zu-ki": { url: "https://tschortsch3711.github.io/von-ka-zu-ki/" },
   fleischbibel: { url: "https://fleischbibel.de/" },
+  "bechtle-3d-druck": { url: "https://tschortsch3711.github.io/bechtle-3d-druck/" },
   "shisha-as-a-service": { url: "https://tschortsch3711.github.io/shisha-as-a-service/" },
   "this-is-tschortsch": {
     url: "https://open.spotify.com/artist/4StU5O0sjXiyuYFDU4IFiL",

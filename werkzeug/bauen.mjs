@@ -92,9 +92,9 @@ ${koerper}
 // Startseite ----------------------------------------------------------------
 function startseite() {
   // Kontaktabzug: ein Raster mit vier Spalten, jede Kachel trägt ihre Gruppe als Etikett.
-  // Die Reihenfolge steht in daten.start.reihenfolge. Am Ende steht der runde Stempel mit dem Link zu GitHub.
+  // Die Reihenfolge steht in daten.start.reihenfolge. Darunter führt ein schwarzer Balken zu GitHub.
   const kachel = (p) => `  <li>
-    <a class="kachel" href="projekte/${p.slug}/">
+    <a class="kachel" href="projekte/${p.slug}/"${p.kachelHinweis ? ` title="${esc(p.kachelHinweis)}"` : ""}>
       <img src="assets/bilder/${p.slug}-800.webp" width="800" height="500" alt=""${p.bildPosition ? ` style="object-position: ${esc(p.bildPosition)}"` : ""}>
       <span class="kachel-text">
         <span class="kachel-nr" aria-hidden="true">${p.nr}</span>
@@ -141,14 +141,12 @@ ${kopf("./")}
 <main id="inhalt">
 <ul class="raster">
 ${alle.map(kachel).join("\n")}
-  <li class="stempel-platz">
-    <a class="stempel" href="${esc(seite.github)}">
-      <span class="etikett">Mehr auf</span>
-      <span class="stempel-name">GitHub</span>
-      <span aria-hidden="true">→</span>
-    </a>
-  </li>
 </ul>
+<a class="mehr" href="${esc(seite.github)}">
+  <span class="etikett">Mehr auf</span>
+  <span class="mehr-name">GitHub</span>
+  <span class="mehr-pfeil" aria-hidden="true">→</span>
+</a>
 </main>
 </div>
 ${fokusSkript}`;
@@ -195,6 +193,36 @@ function projektseite(p, i) {
     )
     .join("\n");
 
+  // Optional: Galerie einzelner Modelle (Bilder unter assets/bilder/<slug>/<bild>-800.webp)
+  const modelle = p.modelle
+    ? `
+    <section class="modelle" aria-labelledby="modelle">
+      <div class="gruppe-kopf"><h2 class="etikett" id="modelle">Die Modelle</h2><span class="etikett">${nr(p.modelle.length)}</span></div>
+      <ul class="modelle-liste">
+${p.modelle
+  .map(
+    (m) => `        <li>
+          <img src="${w}assets/bilder/${p.slug}/${m.bild}-800.webp" width="800" height="550" alt="${esc(m.name)}, gerendert" loading="lazy">
+          <h3>${satz(m.name)}</h3>
+          <p>${satz(m.text)}</p>
+        </li>`
+  )
+  .join("\n")}
+      </ul>
+    </section>
+`
+    : "";
+
+  // Optional: rechtlicher Hinweis, etwa zu Marken Dritter
+  const hinweis = p.hinweis
+    ? `
+    <aside class="hinweis" aria-label="Rechtlicher Hinweis">
+      <p class="etikett">Rechtlicher Hinweis</p>
+      <p>${satz(p.hinweis)}</p>
+    </aside>
+`
+    : "";
+
   const links = p.links
     .map(
       (l) => `        <li>
@@ -229,7 +257,7 @@ ${fakten}
     <section class="text" aria-label="Mehr über ${esc(p.name)}">
 ${absaetze}
     </section>
-
+${modelle}${hinweis}
     <nav class="weiter" aria-labelledby="weiter">
       <div class="gruppe-kopf"><h2 class="etikett" id="weiter">Weiter</h2></div>
       <ul class="weiter-liste">

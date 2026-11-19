@@ -21,7 +21,7 @@ Alle Werte stehen als CSS-Variablen in [`assets/css/tokens.css`](assets/css/toke
 
 **Kopfzeile** `.kopf`: Wortmarke oben links (schwarzes Kästchen „nd“ plus Name). Sie führt immer zur Startseite und ist der Weg zurück. Rechts nur der Link zu GitHub. Unten eine 2-px-Linie.
 
-**Startseite als Kontaktabzug** `.start`, `.raster`, `.kachel`, `.stempel`: Ein Raster mit vier Spalten, auf dem Desktop passt alles auf einen Bildschirm. Die Reihenfolge steht in `daten/projekte.json` unter `start.reihenfolge`, danach richten sich auch die Nummern und „Nächstes Projekt“. Jede Kachel zeigt den Screenshot in Farbe und darunter eine Leiste mit Nummer, Name und Gruppe. Beim Überfahren wird die Leiste schwarz und der Satz zum Projekt klappt auf. Bis 64rem Breite (Handy, Tablet) übernimmt das der Scroll-Fokus: Ein kleines Skript in der Startseite gibt der Zeile an der Fokuslinie die Klasse `fokus`. Die Kacheln werden nie höher als das Bildformat 16:10, damit kein Screenshot seitlich beschnitten wird. Welcher Teil des Bildes bei flachen Kacheln zu sehen ist, steuert pro Projekt das optionale Feld `bildPosition`. Auf dem letzten Platz steht der runde Stempel mit dem Link zu GitHub. Er ist die eine bewusste Ausnahme von „fast alles ist eckig“.
+**Startseite als Kontaktabzug** `.start`, `.raster`, `.kachel`, `.mehr`: Ein Raster mit vier Spalten, auf dem Desktop passt alles auf einen Bildschirm. Die Reihenfolge steht in `daten/projekte.json` unter `start.reihenfolge`, danach richten sich auch die Nummern und „Nächstes Projekt“. Jede Kachel zeigt den Screenshot in Farbe und darunter eine Leiste mit Nummer, Name und Gruppe. Beim Überfahren wird die Leiste schwarz und der Satz zum Projekt klappt auf. Bis 64rem Breite (Handy, Tablet) übernimmt das der Scroll-Fokus: Ein kleines Skript in der Startseite gibt der Zeile an der Fokuslinie die Klasse `fokus`. Die Kacheln werden nie höher als das Bildformat 16:10, damit kein Screenshot seitlich beschnitten wird. Welcher Teil des Bildes bei flachen Kacheln zu sehen ist, steuert pro Projekt das optionale Feld `bildPosition`. Unter dem Raster führt ein schwarzer Balken „Mehr auf GitHub“ weiter, gebaut wie „Nächstes Projekt“ auf den Projektseiten.
 
 **Projektzeile** `.zeile` (nicht mehr auf der Startseite, die Stile nutzt noch der Weiter-Block): Ein ganzer Link pro Projekt mit Nummer, Name, einem Satz und Pfeil. Beim Überfahren dreht sich die Zeile auf Weiß auf Schwarz. Auf dem Handy rutscht der Satz unter den Namen.
 
@@ -31,9 +31,11 @@ Alle Werte stehen als CSS-Variablen in [`assets/css/tokens.css`](assets/css/toke
 
 **Absätze** `.text`: Kurze Zwischentitel links, Text rechts. Auf dem Handy untereinander.
 
+**Modelle und Hinweis** `.modelle`, `.hinweis` (optional, `modelle` und `hinweis` in den Daten): Eine Galerie einzelner Stücke in drei Spalten, auf dem Tablet zwei, auf dem Handy eine. Darunter ein Kasten mit dünnem Rahmen für einen rechtlichen Hinweis, etwa zu Marken Dritter. Ein kurzer Hinweis kann auch als Tooltip auf der Kachel stehen (`kachelHinweis`).
+
 **Weiter** `.weiter`, `.naechstes`: Zeilen im Stil der Projektzeile mit Live-Seite und Repo (nur wenn öffentlich). Darunter, mit Abstand, das nächste Projekt als schwarzer Balken mit großem Namen und Pfeil.
 
-Eine Fußzeile gibt es nicht. Der Link zu GitHub steht in der Kopfzeile und im Stempel.
+Eine Fußzeile gibt es nicht. Der Link zu GitHub steht in der Kopfzeile und im Balken unter dem Raster.
 
 ## Regeln
 

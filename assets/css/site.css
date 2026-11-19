@@ -85,7 +85,7 @@ ul, ol { padding: 0; list-style: none; }
 .einleitung p > span { display: block; text-wrap: balance; }
 .einleitung br.weit { display: none; }
 
-.start main { display: grid; min-height: 0; }
+.start main { display: grid; grid-template-rows: 1fr auto; min-height: 0; }
 .raster {
   width: 100%; margin: 0 auto; padding: var(--s-4) var(--rand) var(--rand);
   display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr;
@@ -129,19 +129,17 @@ ul, ol { padding: 0; list-style: none; }
 .kachel:hover .kachel-satz, .kachel:focus-visible .kachel-satz, .kachel.fokus .kachel-satz { max-height: 4.5rem; color: var(--c-haar); }
 .kachel:focus-visible { outline-offset: 2px; }
 
-/* Stempel: runder Link zu GitHub auf dem letzten Platz im Raster.
-   Er wächst mit der Höhe seines Platzes, die Schrift wächst mit (Container-Einheiten). */
-.stempel-platz { display: flex; align-items: center; justify-content: center; min-height: 0; container-type: size; }
-.stempel {
-  height: 86%; aspect-ratio: 1; border-radius: 50%;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--s-1);
+/* Mehr auf GitHub: schwarzer Balken unter dem Raster, gebaut wie „Nächstes Projekt“ auf den Projektseiten */
+.mehr {
+  display: grid; grid-template-columns: auto 1fr auto; gap: var(--s-4); align-items: baseline;
+  margin: 0 var(--rand) var(--rand); padding: var(--s-4) var(--s-5);
   background: var(--c-tinte); color: var(--c-papier); text-decoration: none;
-  font-size: clamp(1rem, 8cqh, 1.75rem); line-height: 1;
-  transition: transform .2s ease;
 }
-.stempel .etikett { color: var(--c-haar); font-size: clamp(var(--t-klein), 6cqh, 1.25rem); }
-.stempel-name { font-size: clamp(var(--t-zwischen), 13cqh, 3rem); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; }
-.stempel:hover, .stempel:focus-visible { transform: rotate(-6deg) scale(1.04); }
+.mehr .etikett { color: var(--c-haar); }
+.mehr-name { font-size: var(--t-zwischen); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; }
+.mehr-pfeil { font-size: var(--t-zwischen); line-height: 1; transition: transform .12s ease; }
+.mehr:hover .mehr-pfeil, .mehr:focus-visible .mehr-pfeil { transform: translateX(var(--s-2)); }
+.mehr:focus-visible { outline-offset: 3px; }
 
 /* Sehr breite Fenster: Titel und jeder Satz stehen in einer Zeile. Der Text sitzt mittig
    zwischen dem Ende des Titels und dem rechten Rand, die Abstände links und rechts sind gleich. */
@@ -157,10 +155,6 @@ ul, ol { padding: 0; list-style: none; }
   .start { display: block; }
   .raster { grid-template-columns: repeat(2, 1fr); grid-auto-rows: auto; max-height: none; }
   .kachel { height: auto; min-height: 0; aspect-ratio: 16 / 10; }
-  .stempel-platz { container-type: normal; }
-  .stempel { height: 9rem; font-size: 1rem; }
-  .stempel .etikett { font-size: var(--t-klein); }
-  .stempel-name { font-size: var(--t-zwischen); }
 }
 /* Tablet: Der Titel steht dreizeilig links und ist nur so breit wie sein Text. Rand, Abstand zum Text
    und Abstand oben und unten sind gleich groß. Der letzte Satz passt rechts in eine Zeile. */
@@ -178,7 +172,6 @@ ul, ol { padding: 0; list-style: none; }
 }
 @media (max-width: 40rem) {
   .raster { grid-template-columns: 1fr; }
-  .stempel-platz { padding: var(--s-4) 0; }
 }
 .gruppe-kopf {
   display: flex; justify-content: space-between; align-items: baseline; gap: var(--s-4);
@@ -301,6 +294,28 @@ ul, ol { padding: 0; list-style: none; }
   .text { grid-template-columns: 1fr; gap: var(--s-2); padding: var(--s-7) 0 var(--s-6); }
   .text-block > div { margin-bottom: var(--s-5); }
 }
+
+/* Modelle: Galerie in drei Spalten, auf dem Tablet zwei, auf dem Handy eine */
+.modelle { padding-bottom: var(--s-8); }
+.modelle-liste {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-6) var(--s-4);
+  margin-top: var(--s-5);
+}
+.modelle-liste img {
+  width: 100%; aspect-ratio: 16 / 11; object-fit: cover;
+  border: var(--l-duenn) solid var(--c-tinte); border-radius: var(--r-1); background: var(--c-flaeche);
+}
+.modelle-liste h3 { margin-top: var(--s-3); font-weight: 700; letter-spacing: -0.02em; line-height: 1.3; text-wrap: balance; }
+.modelle-liste p { margin-top: var(--s-1); font-size: var(--t-klein); line-height: 1.5; color: var(--c-leise); text-wrap: pretty; }
+@media (max-width: 56rem) { .modelle-liste { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 40rem) { .modelle-liste { grid-template-columns: 1fr; } }
+
+/* Rechtlicher Hinweis: ruhiger Kasten mit dünnem Rahmen */
+.hinweis {
+  margin-bottom: var(--s-8); padding: var(--s-5);
+  border: var(--l-duenn) solid var(--c-tinte); border-radius: var(--r-1);
+}
+.hinweis p + p { margin-top: var(--s-2); max-width: var(--unterbreite); color: var(--c-leise); text-wrap: pretty; }
 
 /* Weiter ----------------------------------------------------------------- */
 .weiter { padding-bottom: var(--s-8); }
