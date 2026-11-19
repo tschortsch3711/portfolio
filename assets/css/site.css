@@ -81,8 +81,9 @@ ul, ol { padding: 0; list-style: none; }
   text-wrap: balance;
 }
 .einleitung p { font-size: var(--t-gross); color: var(--c-leise); }
-/* Jeder Satz der Einleitung beginnt in einer eigenen Zeile und bricht gleichmäßig um */
-.einleitung p span { display: block; text-wrap: balance; }
+/* Jede Zeile der Einleitung beginnt neu und bricht nur zwischen ihren Sinnabschnitten um */
+.einleitung p > span { display: block; text-wrap: balance; }
+.einleitung p .z { display: inline-block; text-wrap: balance; }
 
 .start main { display: grid; min-height: 0; }
 .raster {

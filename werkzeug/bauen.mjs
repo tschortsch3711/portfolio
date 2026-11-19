@@ -130,7 +130,7 @@ function startseite() {
 ${kopf("./")}
 <section class="einleitung">
   <h1>${esc(seite.einleitungTitel)}</h1>
-  <p>${[].concat(seite.einleitung).map((satz) => `<span>${esc(satz)}</span>`).join(" ")}</p>
+  <p>${[].concat(seite.einleitung).map((zeile) => `<span>${abschnitte(zeile)}</span>`).join(" ")}</p>
 </section>
 <main id="inhalt">
 <ul class="raster">
