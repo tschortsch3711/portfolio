@@ -14,9 +14,9 @@
   },
   "start": {
     "reihenfolge": [
-      "3dmensional", "lagerhimmel", "ganachekatze", "bechtle-3d-druck", "shisha-as-a-service",
+      "3dmensional", "lagerhimmel", "ganachekatze", "shisha-as-a-service", "bechtle-3d-druck",
       "von-ka-zu-ki", "fleischbibel", "this-is-tschortsch", "release-pipeline",
-      "br-or-not-2-br", "br-selbstcheck", "br-simulator"
+      "br-selbstcheck", "br-or-not-2-br", "br-simulator"
     ]
   },
   "gruppen": [
