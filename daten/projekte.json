@@ -364,7 +364,7 @@
           "bildPosition": "center top",
           "name": "BR or not 2 BR?",
           "satz": "Zur Betriebsratswahl gehen oder nicht? Zwölf Fragen, eine Minute.",
-          "aussage": "Zur Betriebsratswahl gehen? | Zwölf Fragen helfen beim Entscheiden.",
+          "aussage": "Zur Betriebs\u00adratswahl gehen? | Zwölf Fragen helfen beim Entscheiden.",
           "unter": "Für Unentschlossene, Genervte und Erstwähler. ¦ Nach 30 bis 60 Sekunden | gibt es ein Ergebnis ¦ mit den wichtigsten Faktoren und nächsten Schritten.",
           "fakten": {
             "was": "Entscheidungshilfe zur Teilnahme an der Betriebsratswahl",
